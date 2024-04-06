@@ -1,1 +1,0 @@
-For State Management accross the platform

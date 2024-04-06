@@ -1,11 +1,16 @@
-import "./index.css";
+
+import './index.css'
+import Login from './pages/Login'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
+
   return (
     <>
-      <button className="btn">Click me</button>
+    <Login/>
+    <Toaster/>
     </>
-  );
+  )
 }
 
-export default App;
+export default App
