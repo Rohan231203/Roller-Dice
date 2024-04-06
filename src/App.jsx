@@ -1,9 +1,14 @@
 import "./index.css";
+import SignUpNav from "./components/SignUpNav/SignUpNav";
+import LogInNav from "./components/LogInNav/LogInNav";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
     <>
-      <button className="btn">Click me</button>
+      <SignUpNav />
+      <LogInNav />
+      <Footer />
     </>
   );
 }
