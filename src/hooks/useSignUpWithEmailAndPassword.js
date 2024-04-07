@@ -5,10 +5,12 @@ import { collection, doc, getDocs, query, setDoc, where } from 'firebase/firesto
 import useAuthStore from '../store/authStore';
 
 function endsWithVIT(email) {
-    // Regular expression to match email ending with 'vit.ac.in'
-    var regex = /@vit\.ac\.in$/i; 
+    // Regular expression to match email ending with 'vit.ac.in' or 'vit student.ac.in'
+    var regex = /@(vit\.ac\.in|vitstudent\.ac\.in)$/i; 
     return regex.test(email);
 }
+
+
 const useSignUpWithEmailAndPassword= () =>{
     
     const [
@@ -65,6 +67,8 @@ const useSignUpWithEmailAndPassword= () =>{
         catch(err){
             toast.error(err.message);
         }
+
+        toast.success("User Registered Successfully");
         
 
       }
