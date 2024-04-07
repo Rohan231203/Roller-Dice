@@ -21,6 +21,10 @@ export default function useLogin() {
 				localStorage.setItem("user-info", JSON.stringify(docSnap.data()));
 				loginUser(docSnap.data());
 			}
+
+			toast.success("Verified");
+
+
 		} catch (error) {
 			toast.error(error.message);
 		}
