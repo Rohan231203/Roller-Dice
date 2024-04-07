@@ -1,8 +1,9 @@
-// import College from "../../assets/college.svg";
-// import { MdOutlineEmail } from "react-icons/md";
-// import { RiLockPasswordLine } from "react-icons/ri";
-// import { FaRegUser } from "react-icons/fa";
-// import { PiSignatureDuotone } from "react-icons/pi";
+// import College from "../../assets/college.svg"
+
+import { MdOutlineEmail } from "react-icons/md";
+import { RiLockPasswordLine } from "react-icons/ri";
+import { FaRegUser } from "react-icons/fa";
+import { PiSignatureDuotone } from "react-icons/pi";
 import { useState } from "react";
 import useSignUpWithEmailAndPassword from "../../hooks/useSignUpWithEmailAndPassword";
 
