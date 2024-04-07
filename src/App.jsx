@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./index.css";
 // import Login from "./pages/Login"; 
 import { Toaster } from "react-hot-toast";
@@ -17,8 +18,9 @@ function App() {
   return (
     <>
     
+    
       <Routes>
-        <Route path='/' element={authUser ?<HomePage/> : <Navigate to='/'/>}/>
+        <Route path='/' element={<HomePage/>}/>
         <Route path='/login' element={<LoginSection />} />
         
         <Route path='/signup' element={<SignupSection />} />
