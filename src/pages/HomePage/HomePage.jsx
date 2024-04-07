@@ -1,9 +1,11 @@
 import React from 'react'
+import About from '../../components/About/About.jsx'
 
 export default function HomePage() {
   return (
-    <div>
-      This is the Home Page
-    </div>
+    <>
+    This Is Home Page
+    
+    </>
   )
 }
