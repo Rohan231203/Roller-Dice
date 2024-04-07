@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 // import College from "../../assets/college.svg"
 
 import { MdOutlineEmail } from "react-icons/md";
@@ -29,38 +28,44 @@ const SignupSection = () => {
           </div>
           <form action="" className="flex flex-col gap-5">
             <div className="email-cont flex justify-center items-center gap-3">
-              <MdOutlineEmail size={20} />
+              {/* <MdOutlineEmail size={20} /> */}
               <input
                 type="email"
                 placeholder="Enter your VIT mail"
                 className="px-3 py-1 bg-transparent border-b-2 border-slate-600 placeholder:text-slate-400 pl-1 w-[230px] text-[15px]"
                 value={inputs.value}
-                onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
+                onChange={(e) =>
+                  setInputs({ ...inputs, email: e.target.value })
+                }
               />
             </div>
             <div className="name-cont flex justify-center items-center gap-3">
-              <PiSignatureDuotone size={20} />
+              {/* <PiSignatureDuotone size={20} /> */}
               <input
                 type="text"
                 placeholder="Full Name"
                 className="px-3 py-1 bg-transparent border-b-2 border-slate-600 placeholder:text-slate-400 pl-1  w-[230px] text-[15px]"
                 value={inputs.fullName}
-                onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
+                onChange={(e) =>
+                  setInputs({ ...inputs, fullName: e.target.value })
+                }
               />
             </div>
             <div className="username cont flex justify-center items-center gap-3">
-              <FaRegUser size={20} />
+              {/* <FaRegUser size={20} /> */}
               <input
                 type="text"
                 placeholder="Enter your username"
                 className="px-3 py-1 bg-transparent border-b-2 border-slate-600 placeholder:text-slate-400 pl-1  w-[230px] text-[15px]"
                 value={inputs.username}
-                onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
+                onChange={(e) =>
+                  setInputs({ ...inputs, username: e.target.value })
+                }
               />
             </div>
 
             <div className="password-cont flex justify-center items-center gap-3">
-              <RiLockPasswordLine size={20} />
+              {/* <RiLockPasswordLine size={20} /> */}
               <input
                 type="password"
                 name="password"
@@ -68,7 +73,9 @@ const SignupSection = () => {
                 value={inputs.password}
                 placeholder="Password"
                 className="px-3 py-1 bg-transparent border-b-2 border-slate-600 placeholder:text-slate-400 pl-1 w-[230px] text-[15px]"
-                onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
+                onChange={(e) =>
+                  setInputs({ ...inputs, password: e.target.value })
+                }
               />
             </div>
           </form>
@@ -76,7 +83,7 @@ const SignupSection = () => {
             <button
               type="button"
               className=" bg-[#DB4444] flex justify-center items-center text-white font-medium  text-sm h-9 w-full rounded-sm hover:text-[#DB4444] hover:bg-transparent hover:border-2 border-[#DB4444] hover:font-semibold"
-              onClick={()=>signup(inputs)} // Replace `handleClick` with your click event handler function
+              onClick={() => signup(inputs)} // Replace `handleClick` with your click event handler function
               disabled={loading}
             >
               Login
