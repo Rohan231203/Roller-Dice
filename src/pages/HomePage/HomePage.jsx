@@ -5,7 +5,9 @@ import Footer from "../../components/Footer/Footer";
 export default function HomePage() {
   return (
     <div>
-      This is the Home Page
+      <LogInNav/>
+      <Sidebar/>
+      <Footer/>
     </div>
   )
 }
