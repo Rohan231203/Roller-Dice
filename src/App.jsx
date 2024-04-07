@@ -5,14 +5,11 @@ function App() {
 
   return (
     <>
-      <h1 className='text mb-3 mt-3 text-cyan-400 font-bold text-3xl'>Aditya </h1>
-      <button className="btn">Button</button>
-<button className="btn btn-neutral">Neutral</button>
-<button className="btn btn-primary">Primary</button>
-<button className="btn btn-secondary">Secondary</button>
-<button className="btn btn-accent">Accent</button>
-<button className="btn btn-ghost">Ghost</button>
-<button className="btn btn-link">Link</button>
+     <div className="navbar bg-blue-400"></div>
+     <div className="flex">
+        <div className="sidebar flex flex-col items-center text-white w-1/4 h-screen">Hi</div>
+        <div className="content bg-slate-400 text-white w-3/4 h-screen">this is content</div>
+     </div>
     </>
   )
 }
