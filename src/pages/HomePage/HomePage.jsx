@@ -1,11 +1,11 @@
-import React from 'react'
-import About from '../../components/About/About.jsx'
+import LogInNav from "../../components/LogInNav/LogInNav";
+import Sidebar from "../../components/Sidebar/Sidebar";
+import Footer from "../../components/Footer/Footer";
 
 export default function HomePage() {
   return (
-    <>
-    This Is Home Page
-    
-    </>
+    <div>
+      This is the Home Page
+    </div>
   )
 }
