@@ -4,7 +4,7 @@ import { RiLockPasswordLine } from "react-icons/ri";
 
 const LoginSection = () => {
   return (
-    <main className="w-full px-[6rem] pt-[3rem] pb-[5rem] bg-white flex relative">
+    <main className="w-full h-[calc(100vh - 4rem)] pb-[3rem] px-[6rem] bg-white flex relative">
       <div className="hero-img w-3/6">
         <img src={College} alt="College.svg" width="550px" height="550px" />
       </div>

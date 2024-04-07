@@ -4,7 +4,7 @@ const LogInNav = () => {
   return (
     <nav className="navbar bg-white px-[5rem] flex justify-between h-[4rem] py-0">
       <div className="logo text-xl text-black font-bold">VelocityMart</div>
-      <ul className="flex gap-9 text-black">
+      {/* <ul className="flex gap-9 text-black">
         <li className="py-5">
           <a href="">Home</a>
         </li>
@@ -17,7 +17,7 @@ const LogInNav = () => {
         <li className="underline underline-offset-4">
           <a href="">Log in</a>
         </li>
-      </ul>
+      </ul> */}
       <div className="search-bar input h-9">
         <input type="text" placeholder="Search..." />
         <FaSearch className="search-icon" />
