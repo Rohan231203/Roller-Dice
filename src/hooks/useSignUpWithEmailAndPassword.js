@@ -50,6 +50,7 @@ const useSignUpWithEmailAndPassword= () =>{
                     soldTo:[],
                     purchasedFrom:[],
                     items:[],
+                    rentItem:[],
                     createdAt:Date.now(),
                     
                 };
