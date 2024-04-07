@@ -21,11 +21,10 @@ const SignupSection = () => {
       <div className="hero-img w-3/6">
         <img src={College} alt="College.svg" width="550px" height="550px" />
       </div>
-      <section className="w-3/6 flex items-center justify-center flex-col ">
-        <div className="login-container flex items-start flex-col gap-8 p-[1.5rem]">
+      <section className="w-3/6 flex items-center justify-center flex-col">
+        <div className="login-container flex items-center flex-col gap-8 p-[2.5rem] border-2">
           <div className="header-login flex flex-col gap-3">
             <h2 className="text-3xl text-black font-bold">Create an account</h2>
-            <p className="text-slate-700 text-lg">Enter your details here</p>
           </div>
           <form action="" className="flex flex-col gap-5">
             <div className="email-cont flex justify-center items-center gap-3">
