@@ -1,6 +1,8 @@
 import toast from "react-hot-toast";
 import LoginSection from "../components/LoginSection/LoginSection";
-import SignupSection from "../components/SignupSection/SignupSection";
+// import SignupSection from "../components/SignupSection/SignupSection";
+import LogInNav from "../components/LogInNav/LogInNav";
+import Footer from "../components/Footer/Footer";
 
 export default function Login() {
   const hello = () => {
@@ -9,9 +11,12 @@ export default function Login() {
   };
   return (
     <div>
-      <button onClick={hello}>Login</button>
+      {/* <button onClick={hello}>Login</button> */}
+      <LogInNav />
       <LoginSection />
-      <SignupSection />
+      <Footer />
+
+      {/* <SignupSection /> */}
     </div>
   );
 }
