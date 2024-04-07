@@ -1,4 +1,4 @@
-import College from "../../assets/college.svg"
+// import College from "../../assets/college.svg"
 
 import { MdOutlineEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
@@ -19,7 +19,7 @@ const SignupSection = () => {
   return (
     <main className="w-full px-[6rem] pt-[3rem] pb-[5rem] bg-white flex relative">
       <div className="hero-img w-3/6">
-        <img src={College} alt="College.svg" width="550px" height="550px" />
+        {/* <img src={College} alt="College.svg" width="550px" height="550px" /> */}
       </div>
       <section className="w-3/6 flex items-center justify-center flex-col">
         <div className="login-container flex items-center flex-col gap-8 p-[2.5rem] border-2">

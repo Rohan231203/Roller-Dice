@@ -18,7 +18,7 @@ function App() {
     <>
     
       <Routes>
-        <Route path='/' element={authUser ?<HomePage/> : <Navigate to='/'/>}/>
+        <Route path='/' element={<HomePage/> }/>
         <Route path='/login' element={<LoginSection />} />
         
         <Route path='/signup' element={<SignupSection />} />
