@@ -3,15 +3,37 @@
 const Modal = () => {
     return (
         <div>
-            <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button>
-            <dialog id="my_modal_3" className="modal">
+            <button className="btn btn-primary" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button>
+            <dialog id="my_modal_3" className="modal ">
                 <div className="modal-box">
                     <form method="dialog">
-                        {/* if there is a button in form, it will close the modal */}
-                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+
+                        <button className="btn btn-sm btn-circle btn-primary absolute right-2 top-2">✕</button>
                     </form>
-                    <h3 className="font-bold text-lg">Hello!</h3>
-                    <p className="py-4">Press ESC key or click on ✕ button to close</p>
+                    <h3 className="font-bold text-lg">Enter Inputs For Listing Item</h3>
+
+                    <input type="text" placeholder="Enter Title" className="input input-bordered border-2 input-ghost w-full max-w-xs mt-5" />
+                    <textarea placeholder="Describe Your Product" className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 p-1" ></textarea>
+                    <label className="form-control w-full max-w-xs">
+                        <div className="label">
+                            <span className="label-text">Pick the best fantasy franchise</span>
+                            <span className="label-text-alt">Alt label</span>
+                        </div>
+                        <select className="select select-bordered">
+                            <option disabled selected>Pick one</option>
+                            <option>Star Wars</option>
+                            <option>Harry Potter</option>
+                            <option>Lord of the Rings</option>
+                            <option>Planet of the Apes</option>
+                            <option>Star Trek</option>
+                        </select>
+                        <div className="label">
+                            <span className="label-text-alt">Alt label</span>
+                            <span className="label-text-alt">Alt label</span>
+                        </div>
+                    </label>
+
+                    <input type="file" className="py-4" placeholder="Enter Image of Item here"></input>
                 </div>
             </dialog>
         </div>
