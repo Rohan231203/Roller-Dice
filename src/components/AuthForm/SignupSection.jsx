@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import College from "../../assets/college.svg"
 
 import { MdOutlineEmail } from "react-icons/md";
