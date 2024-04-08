@@ -30,7 +30,7 @@ const HomeSection = () => {
   ];
   return (
     <main
-      className="w-5/6 overflow-y-scroll flex flex-col"
+      className="w-5/6 overflow-y-auto flex flex-col scrollbar-hidden"
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
       <div className="carousel min-h-[300px]">
@@ -85,8 +85,8 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="categories w-full bg-white px-[2rem] py-[2rem] m-0">
-        <h2 className="text-2xl font-bold text-black mb-[2rem]">
+      <div className="categories w-full bg-white px-10 pt-10 m-0">
+        <h2 className="text-2xl font-bold text-black mb-10">
           Browse by categories
         </h2>
         <div className="categories-container flex justify-between">

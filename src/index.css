@@ -5,3 +5,20 @@
 :root {
   --navbar-height: 4rem;
 }
+
+div::-webkit-scrollbar,
+section::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit (Chrome, Safari, Edge) */
+}
+
+section {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for webkit (Chrome, Safari, Edge) */
+}
+
+main {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
