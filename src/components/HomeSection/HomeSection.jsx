@@ -4,6 +4,7 @@ import { IoBookSharp } from "react-icons/io5";
 import { FaBucket } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa6";
 import ItemDisplaySection from "../ItemDisplaySection/ItemDisplaySection";
+import 'animate.css';
 
 const HomeSection = () => {
   const categoryList = [
@@ -85,11 +86,11 @@ const HomeSection = () => {
         </div>
       </div>
 
-      <div className="categories w-full bg-white px-10 pt-10 m-0">
+      <div className="categories w-full bg-white px-10 pt-10 m-0  ">
         <h2 className="text-2xl font-bold text-black mb-10">
           Browse by categories
         </h2>
-        <div className="categories-container flex justify-between">
+        <div className="categories-container flex justify-between animation-element">
           {categoryList.map((catItem, index) => {
             return (
               <div
