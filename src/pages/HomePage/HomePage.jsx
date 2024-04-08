@@ -9,9 +9,12 @@ export default function HomePage() {
   return (
     <div>
       <LogInNav/>
-      <HomeSection />
+      <div className="main-section-home flex">
       <Sidebar/>
+      <HomeSection />
+      </div>
       <Footer/>
+      <About/>
     </div>
   )
 }
