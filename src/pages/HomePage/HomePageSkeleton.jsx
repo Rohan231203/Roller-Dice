@@ -15,6 +15,16 @@ const HomePageSkeleton = () => {
         </div>
         <div className="homepage w-5/6 h-screen rounded-none">
           <div className="carousel skeleton w-full rounded-none h-[400px]"></div>
+          <div className="item-container p-5">
+            <div className="skeleton w-64 h-10 mb-6"></div>
+            <ul className="flex justify-between w-full">
+              <li className="h-[10rem] w-[10rem] skeleton "></li>
+              <li className="h-[10rem] w-[10rem] skeleton "></li>
+              <li className="h-[10rem] w-[10rem] skeleton "></li>
+              <li className="h-[10rem] w-[10rem] skeleton "></li>
+              <li className="h-[10rem] w-[10rem] skeleton "></li>
+            </ul>
+          </div>
         </div>
       </div>
     </>

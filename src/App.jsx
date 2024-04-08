@@ -9,6 +9,7 @@ import { auth } from "./firebase/firebase";
 import Profilepage from "./pages/ProfilePage/Profilepage";
 import AboutPage from "./pages/AuthPage/AboutPage";
 import HomePageSkeleton from "./pages/HomePage/HomePageSkeleton";
+import HomePage from "./pages/HomePage/HomePage";
 
 function App() {
   const [authUser] = useAuthState(auth);
@@ -18,7 +19,7 @@ function App() {
       <Routes>
         <Route
           path="/"
-          element={authUser ? <HomePageSkeleton /> : <Navigate to="/login" />}
+          element={authUser ? <HomePage /> : <Navigate to="/login" />}
         />
         <Route
           path="/login"
