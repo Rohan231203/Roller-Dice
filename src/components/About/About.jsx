@@ -2,9 +2,8 @@
 
 function About() {
   return (
-    <div >
-      <div className="flex justify-end ">
-        <section className="flex justify-center   bg-white w-5/6" style={{ height: "calc(100vh - var(--navbar-height))" }}>
+     
+        <section className="flex justify-center overflow-y-auto bg-white w-5/6" style={{ height: "calc(100vh - var(--navbar-height))" }}>
           <div className="about-content text-center max-w-3xl mt-8 bg-[url('Assets\cool-background.png')]">
             <h2 className="text-5xl font-bold font-mono mb-4 text-red-700	color: rgb(185 28 28);">About Us</h2>
             <p className="text-xl mb-8 text-black	color: rgb(0 0 0);">
@@ -67,8 +66,7 @@ function About() {
           </div>
           </div>
         </section>
-      </div>
-    </div>
+     
   )
 }
 
