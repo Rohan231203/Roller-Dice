@@ -7,6 +7,7 @@ import LoginSection from "./components/AuthForm/LoginSection";
 import SignupSection from "./components/AuthForm/SignupSection";
 import { auth } from "./firebase/firebase";
 import Profilepage from "./pages/ProfilePage/Profilepage";
+import AboutPage from "./pages/AuthPage/AboutPage";
 import HomePageSkeleton from "./pages/HomePage/HomePageSkeleton";
 
 function App() {
@@ -24,8 +25,14 @@ function App() {
           element={!authUser ? <LoginSection /> : <Navigate to="/" />}
         />
 
-        <Route path="/signup" element={<SignupSection />} />
+        <Route
+          path="/signup"
+          element={!authUser ? <SignupSection /> : <Navigate to="/" />}
+        />
+
         <Route path="/profile" element={<Profilepage />} />
+
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Toaster />
     </>

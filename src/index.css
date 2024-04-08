@@ -33,3 +33,12 @@ main::-webkit-scrollbar {
 main {
   scrollbar-width: none; /* Hide scrollbar for Firefox */
 }
+
+div::-webkit-scrollbar {
+  display: none;
+}
+
+div{
+  scrollbar-width: none;
+}
+
