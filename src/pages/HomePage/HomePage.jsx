@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <>
       <LogInNav />
-      <div className="main-section-home flex">
+      <div className="main-section-home flex w-full">
         <Sidebar />
         <HomeSection />
       </div>

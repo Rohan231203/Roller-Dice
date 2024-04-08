@@ -3,6 +3,7 @@ import { CgGym } from "react-icons/cg";
 import { IoBookSharp } from "react-icons/io5";
 import { FaBucket } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa6";
+import ItemDisplaySection from "../ItemDisplaySection/ItemDisplaySection";
 
 const HomeSection = () => {
   const categoryList = [
@@ -102,6 +103,7 @@ const HomeSection = () => {
           })}
         </div>
       </div>
+      <ItemDisplaySection />
     </main>
   );
 };
