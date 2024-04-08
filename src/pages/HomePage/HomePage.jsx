@@ -2,16 +2,15 @@
 import LogInNav from "../../components/LogInNav/LogInNav";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
-
-/* eslint-disable no-unused-vars */
-import React from 'react'
+import HomeSection from "../../components/HomeSection/HomeSection";
 
 export default function HomePage() {
   return (
-    <div>
-      <LogInNav/>
-      <Sidebar/>
-      <Footer/>
-    </div>
-  )
+    <>
+      <LogInNav />
+      <HomeSection />
+      <Sidebar />
+      <Footer />
+    </>
+  );
 }
