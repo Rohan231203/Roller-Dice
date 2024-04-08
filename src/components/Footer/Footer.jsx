@@ -6,9 +6,7 @@ const Footer = () => {
     <footer className="flex w-full  justify-between items-start bg-black px-8 pt-8 pb-16 text-white">
       <div className="subscribe flex flex-col gap-6">
         <h3 className="font-bold text-lg">Subscribe</h3>
-        <p className="text-base font-normal">
-          Get product info in your mail
-        </p>
+        <p className="text-base font-normal">Get product info in your mail</p>
         <div className="input bg-transparent flex h-10 rounded-md border-white">
           <input
             type="email"
@@ -39,7 +37,7 @@ const Footer = () => {
       </div>
       <div className="quick-link flex flex-col gap-2">
         <h3 className="font-bold text-lg">Quick link</h3>
-        <ul className="flex flex-col gap-2">
+        <ul className="flex flex-col gap-2 text-gray-400">
           <li className="hover:text-white">
             <a href="#">FAQs</a>
           </li>

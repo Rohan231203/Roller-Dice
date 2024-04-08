@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <LogInNav />
-      <div className="main-section-home flex w-full">
+      <div className="main-section-home flex w-full mt-[var(--navbar-height)]">
         <Sidebar />
         <HomeSection />
       </div>
