@@ -11,7 +11,7 @@ import { firestore } from "../firebase/firebase";
 
 export default function useGetItems() {
   const [isLoading, setIsLoading] = useState(true);
-  const [items, setItems] = useitemStore();
+  // const [items, setItems] = useitemStore();
   const authUser = useAuthStore((state) => state.user)
   const { setUSerProfile } = useUserProfileStore();
   useEffect(() => {

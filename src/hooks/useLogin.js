@@ -6,7 +6,8 @@ import toast  from 'react-hot-toast';
 
 
 export default function useLogin() {
-    const [signInWithEmailAndPassword,loading, error] = useSignInWithEmailAndPassword(auth);
+    const [signInWithEmailAndPassword, loading, error] = useSignInWithEmailAndPassword(auth);
+
 	const loginUser = useAuthStore((state) => state.login);
     const login = async (inputs) => {
 		if (!inputs.email || !inputs.password) {
@@ -22,11 +23,11 @@ export default function useLogin() {
 				loginUser(docSnap.data());
 			}
 
-			toast.success("Verified");
 
 
 		} catch (error) {
 			toast.error(error.message);
+			console.log(error.code)
 		}
 	};
 
