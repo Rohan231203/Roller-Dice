@@ -19,7 +19,7 @@ export default function useSellitems() {
     const userProfile = useUserProfileStore((state) => state.userProfile);
 	const { pathname } = useLocation();
 
-    const handleSellItem=async(selectedFile,title,description,category)=>{
+    const handleSellItem=async(selectedFile,title,description,category,phone,address)=>{
         if(isLoading) return;
         if(!selectedFile) throw new Error("Please Select a file")
         setIsLoading(true)
@@ -28,7 +28,9 @@ export default function useSellitems() {
             postedAt:Date.now(),
             title:title,
             description:description,
-            category:category
+            category:category,
+            phone:phone,
+            address:address
         };
         try{
             const postItemRef=await addDoc(collection(firestore,"items"),newItem);
@@ -58,7 +60,7 @@ export default function useSellitems() {
             toast.success("Your Item is Listed Succesfully")
         }
         catch(error){
-            toast.error(error.message);
+            // toast.error(error.message);
         }
         finally{
             setIsLoading(false)
