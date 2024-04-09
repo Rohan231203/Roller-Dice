@@ -92,7 +92,7 @@ const HomeSection = () => {
       <Slideshow />
 
       <div className="categories w-full bg-white px-10 pt-10 m-0  ">
-        <h2 className="text-2xl font-bold text-black mb-10">
+        <h2 className="text-2xl font-bold mb-10">
           Browse by categories
         </h2>
         <div className="categories-container flex justify-between animation-element">

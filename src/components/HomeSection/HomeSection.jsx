@@ -40,10 +40,11 @@ const HomeSection = () => {
   ];
   return (
     <main
-      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden bg-gradient-to-b from-[#090e16] to-[#06090E]"
+      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden bg-gradient-to-b from-[#101826] to-[#06090E]"
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
       <Slideshow />
+      <div className="divider"></div>
       {/* categories */}
       <div className="categories w-full bg-transparent px-10 pt-10 m-0 bg-gradient-to-b from-[#06090E] to-gray-900">
         <h2 className="text-2xl font-bold text-gray-200 mb-10">
@@ -63,12 +64,16 @@ const HomeSection = () => {
             );
           })}
         </div>
+       
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
           <div className="item-container h-96 flex">
+            
             <FeedPosts />
           </div>
+         
         </div>
+       
       </div>
     </main>
   );
