@@ -1,7 +1,7 @@
-// import React from "react";
+
 import PropTypes from "prop-types";
 
-const Test1 = ({ item }) => {
+const FilterPost = ({ item }) => {
   return (
     <article className="itemCard min-w-[300px] p-4 rounded-xl flex flex-col hover:scale-10 cursor-pointer bg-gray-700">
       <div className="mb-4 rounded-xl w-full h-40">
@@ -24,7 +24,7 @@ const Test1 = ({ item }) => {
   );
 };
 
-Test1.propTypes = {
+FilterPost.propTypes = {
   item: PropTypes.shape({
     imageURL: PropTypes.string,
     title: PropTypes.string,
@@ -33,4 +33,4 @@ Test1.propTypes = {
   }),
 };
 
-export default Test1;
+export default FilterPost;

@@ -1,9 +1,10 @@
 // import React from 'react';
 import { useEffect } from "react";
 import useFilterByCategory from "../../hooks/useFilterByCategory";
-import Test1 from './Test1';
+import FilterPost from "./FilterPost";
+// import Test1 from './Test1';
 
-const Tests1 = () => {
+const FilterPosts = () => {
     const { isLoading, categoryItems,sortByCategory } = useFilterByCategory();
     useEffect(() => {
         sortByCategory("Academics");
@@ -13,7 +14,7 @@ const Tests1 = () => {
         <div className="flex gap-10">
             {!isLoading && categoryItems.length > 0 ? (
                 categoryItems.map((item) => (
-                    <Test1 key={item.id} item={item} />
+                    <FilterPost key={item.id} item={item} />
                 ))
             ) : (
                 <>Dayuum. Looks like you don&apos;t have any ads now.</>
@@ -22,4 +23,4 @@ const Tests1 = () => {
     );
 };
 
-export default Tests1;
+export default FilterPosts;

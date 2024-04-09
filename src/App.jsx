@@ -17,6 +17,7 @@ import PageLayout from "./Page Layout/PageLayout";
 import TestPage from "./pages/TestPage";
 import FAQPage from "./pages/FaqPage/FAQPage";
 import Test1 from "./pages/TestPage/Test1";
+import Tests1 from "./pages/TestPage/Tests1";
 
 function App() {
   const [authUser] = useAuthState(auth);
@@ -38,7 +39,7 @@ function App() {
         />
         <Route path="/profile" element={<Profilepage />} />
         <Route path="/about" element={<AboutPage />} />
-        <Route path="/test" element={<TestPage />} />
+        <Route path="/test" element={<Tests1 />} />
         <Route path="/faq" element={<FAQPage />} />
       </Routes>
       
