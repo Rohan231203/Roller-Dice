@@ -2,7 +2,7 @@
 import LogInNav from "../../components/LogInNav/LogInNav";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
-import About from '../../components/About/About';
+
 import HomeSection from "../../components/HomeSection/HomeSection";
 import FeedPosts from "../../components/FeedPosts/FeedPosts";
 
@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <>
       <LogInNav />
-      <div className="main-section-home flex w-full">
+      <div className="main-section-home flex w-full mt-[var(--navbar-height)]">
         <Sidebar />
         <HomeSection />
       </div>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // import College from "../../Assets/college.svg";
 import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
