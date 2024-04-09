@@ -13,7 +13,6 @@ const Sidebar = () => {
   return (
     <aside
       className="w-1/6 bg-[#141414]  flex flex-col justify-between items-center px-[1rem] py-[2rem] "
-      className="w-1/6 bg-[#141414]  flex flex-col justify-between items-center px-[1rem] py-[2rem] "
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
       <ul className="w-full flex flex-col gap-3 ">
@@ -31,6 +30,7 @@ const Sidebar = () => {
         </div>
         <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]">
           <MdOutlineQuestionMark size={19} />
+        </div>
         <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]">
           <MdOutlineQuestionMark size={19} />
           <li>FAQs</li>
