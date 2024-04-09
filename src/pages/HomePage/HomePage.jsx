@@ -7,7 +7,7 @@ import HomeSection from "../../components/HomeSection/HomeSection";
 
 export default function HomePage() {
   return (
-    <div className="font-Poppins bg-[#141414]">
+    <div className=" bg-[#141414]">
       <LogInNav />
       <div className="main-section-home flex w-full mt-[var(--navbar-height)] ">
         <Sidebar />
