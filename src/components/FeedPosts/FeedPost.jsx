@@ -19,7 +19,7 @@ const FeedPost = ({ item }) => {
         {item.description}
       </p>
       <div className=" mt-auto">
-        <Modal2 />
+        <Modal2/>
       </div>
     </article>
   );

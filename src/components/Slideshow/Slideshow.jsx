@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "animate.css"
 
+
 function Slideshow() {
   const [slideIndex, setSlideIndex] = useState(0);
 
