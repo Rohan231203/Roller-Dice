@@ -8,7 +8,7 @@ export default function FAQPage() {
   return (
     <div className="bg-[#141414]">
       <LogInNav />
-      <div className="main-section-home flex w-full mt-[var(--navbar-height)] ">
+      <div className="main-section-home flex w-full mt-[var(--navbar-height)] overflow-y-auto">
         <Sidebar />
         <FAQ />
       </div>
