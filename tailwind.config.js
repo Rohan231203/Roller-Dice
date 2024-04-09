@@ -1,3 +1,7 @@
+/* eslint-disable no-unused-vars */
+
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
@@ -14,6 +18,7 @@ export default {
       textColor: ["focus"], // Enable focus variant for textColor
       placeholderColor: ["focus"], // Enable focus variant for placeholderColor
     },
+    
   },
   // eslint-disable-next-line no-undef
   plugins: [require("daisyui")],

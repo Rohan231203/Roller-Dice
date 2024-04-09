@@ -8,8 +8,10 @@ import SignupSection from "./components/AuthForm/SignupSection";
 import { auth } from "./firebase/firebase";
 import Profilepage from "./pages/ProfilePage/Profilepage";
 import AboutPage from "./pages/AuthPage/AboutPage";
+import AboutPageSkeleton from "./pages/AuthPage/AboutPageSkeleton";
 import HomePageSkeleton from "./pages/HomePage/HomePageSkeleton";
 import HomePage from "./pages/HomePage/HomePage";
+import ProfilePageSkeleton from "./pages/ProfilePage/ProfilePageSkeleton";
 
 function App() {
   const [authUser] = useAuthState(auth);
