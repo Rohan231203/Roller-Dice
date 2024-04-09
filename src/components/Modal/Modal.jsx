@@ -48,7 +48,7 @@ const Modal = () => {
         className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-[#b6b5b5] text-base font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
         onClick={() => modalRef.current.showModal()}
       >
-        Post item
+        Post Item
       </button>
       <dialog id="my_modal_3" className="modal" ref={modalRef}>
         <div className="modal-box">

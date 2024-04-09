@@ -48,25 +48,22 @@ function Slideshow() {
 
   return (
     <div>
-      <div className="slideshow-container max-w-full mx-auto relative max-h-[450px] overflow-hidden flex justify-center items-center bg-[#29292e] rounded-lg">
-        <div className="sub-container border-white">
-        <div className="mySlides fade mx-auto animate__animated animate__backInRight" key={1}>
-          <img src="vit1.jpg" className="w-[600px] cover h-[350px] " alt="Slide 1" />
+      <div className="slideshow-container max-w-[70%] mx-auto relative max-h-[450px] overflow-hidden flex justify-center items-center h-[400px]  rounded-lg">
+        <div className="sub-container border-white ">
+        <div className="mySlides fade mx-auto animate__animated " key={1}>
+          <img src="vit1.jpg" className=" object-cover h-[350px] " alt="Slide 1" />
           
         </div>
 
-        <div className="mySlides fade mx-auto animate__animated animate__backInRight" key={2}>
-          <img src="vit2.jpg" className="w-[600px] cover h-[350px] " alt="Slide 2" />
+        <div className="mySlides fade mx-auto animate__animated " key={2}>
+          <img src="vit2.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 2" />
           
         </div>
 
-        <div className="mySlides fade mx-auto animate__animated animate__backInRight" key={3}>
-          <img src="vit3.jpg" className="w-[600px] cover h-[350px] " alt="Slide 3" />
-          
-        </div>
+   
 
-        <div className="mySlides fade mx-auto animate__animated animate__backInRight" key={4}>
-          <img src="vit4.jpg" className="w-[600px] cover h-[350px] " alt="Slide 4" />
+        <div className="mySlides fade mx-auto animate__animated " key={4}>
+          <img src="vit4.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 4" />
           
         </div>
 
