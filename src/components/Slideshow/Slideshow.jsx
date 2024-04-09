@@ -1,7 +1,4 @@
 import { useState, useEffect } from "react";
-import Notes from "../../Assets/notes.jpg";
-import Dumbbell from "../../Assets/dumbbell.webp";
-import SolderingIron from "../../Assets/soldering-iron.webp";
 
 function Slideshow() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -51,17 +48,17 @@ function Slideshow() {
     <div>
       <div className="slideshow-container max-w-full mx-auto relative max-h-[400px] overflow-hidden flex justify-center items-center">
         <div className="mySlides fade mx-auto">
-          <img src={Notes} className="w-[100%] cover" alt="Slide 1" />
+          <img src="notes.jpg" className="w-[100%] cover" alt="Slide 1" />
           <div className="text">Caption Text</div>
         </div>
 
         <div className="mySlides fade mx-auto">
-          <img src={Dumbbell} className="w-[600px]" alt="Slide 2" />
+          <img src="dumbbell.webp" className="w-[600px]" alt="Slide 2" />
           <div className="text">Caption Two</div>
         </div>
 
         <div className="mySlides fade mx-auto">
-          <img src={SolderingIron} className="w-[600px]" alt="Slide 3" />
+          <img src="soldering-iron.webp" className="w-[600px]" alt="Slide 3" />
           <div className="text">Caption Three</div>
         </div>
 

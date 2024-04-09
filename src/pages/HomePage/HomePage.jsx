@@ -12,9 +12,7 @@ export default function HomePage() {
       <div className="main-section-home flex w-full mt-[var(--navbar-height)] ">
         <Sidebar />
         <HomeSection />
-        
       </div>
-     
       <Footer />
     </div>
   );
