@@ -17,12 +17,12 @@ const LoginSection = () => {
     <>
       {/* <LogInNav /> */}
       <main className="w-full pb-[3rem] px-[6rem] bg-white flex relative h-screen">
-        <div className="hero-img w-3/6">
+        <div className="hero-img w-3/6 flex items-center">
           <img
-            src="college.svg"
+            src="secure-login.gif"
             alt="College.svg"
-            width="550px"
-            height="550px"
+            width="600px"
+            height="600px"
           />
         </div>
         <section className="w-3/6 flex items-center justify-center flex-col">

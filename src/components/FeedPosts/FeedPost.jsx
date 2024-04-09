@@ -4,13 +4,13 @@ import Modal2 from "../Modal/Modal2";
 
 const FeedPost = ({ item }) => {
   return (
-    <article className="itemCard min-w-[300px] p-4 rounded-xl flex flex-col hover:scale-10 bg-gray-800 shadow-gray-200">
+    <article className="itemCard w-[300px] p-4 rounded-xl flex flex-col hover:scale-10 bg-gray-800 shadow-gray-200">
       <div className="mb-4 rounded-xl w-full h-40">
         {item.imageURL && (
           <img
             src={item.imageURL}
             alt={"Feed Post image"}
-            className="rounded-md object-fit w-full h-full"
+            className="rounded-md object-cover w-full h-full"
           />
         )}
       </div>

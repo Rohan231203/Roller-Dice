@@ -51,7 +51,7 @@ const Modal = () => {
   return (
     <div className="w-full">
       <button
-        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-white  text-base font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
+        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
         onClick={() => modalRef.current.showModal()}
       >
         Post Item
