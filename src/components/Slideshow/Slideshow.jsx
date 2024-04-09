@@ -39,10 +39,8 @@ function Slideshow() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      plusSlides(1); // Auto-advance to the next slide every 2 seconds
+      plusSlides(1);
     }, 2000);
-
-    // Clean up the interval on component unmount
     return () => clearInterval(interval);
   }, [slideIndex]);
 
