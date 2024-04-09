@@ -13,6 +13,7 @@ import AboutPageSkeleton from "./pages/AuthPage/AboutPageSkeleton";
 import HomePageSkeleton from "./pages/HomePage/HomePageSkeleton";
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePageSkeleton from "./pages/ProfilePage/ProfilePageSkeleton";
+import PageLayout from "./Page Layout/PageLayout";
 
 function App() {
   const [authUser] = useAuthState(auth);
@@ -28,14 +29,11 @@ function App() {
           path="/login"
           element={!authUser ? <LoginSection /> : <Navigate to="/" />}
         />
-
         <Route
           path="/signup"
           element={!authUser ? <SignupSection /> : <Navigate to="/" />}
         />
-
         <Route path="/profile" element={<Profilepage />} />
-
         <Route path="/about" element={<AboutPage />} />
       </Routes>
       <Toaster />

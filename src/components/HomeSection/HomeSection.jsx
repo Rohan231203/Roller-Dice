@@ -4,9 +4,8 @@ import { CgGym } from "react-icons/cg";
 import { IoBookSharp } from "react-icons/io5";
 import { FaBucket } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa6";
-import ItemDisplaySection from "../ItemDisplaySection/ItemDisplaySection";
 import Slideshow from "../Slideshow/Slideshow";
-import 'animate.css';
+import "animate.css";
 import FeedPosts from "../FeedPosts/FeedPosts";
 
 const HomeSection = () => {
@@ -59,8 +58,12 @@ const HomeSection = () => {
           })}
         </div>
       </div>
-      {/*<ItemDisplaySection />*/}
-      <FeedPosts/>
+      <div className="item-section py-10 bg-white px-10">
+        <h1 className="text-2xl text-black font-bold mb-8">Products</h1>
+        <div className="item-container h-96 w-96 object-contain flex">
+          <FeedPosts />
+        </div>
+      </div>
     </main>
   );
 };

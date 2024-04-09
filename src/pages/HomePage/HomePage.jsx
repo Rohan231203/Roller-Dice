@@ -2,11 +2,8 @@
 import LogInNav from "../../components/LogInNav/LogInNav";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
-
-
 import HomeSection from "../../components/HomeSection/HomeSection";
-import FeedPosts from "../../components/FeedPosts/FeedPosts";
-
+// import FeedPosts from "../../components/FeedPosts/FeedPosts";
 
 export default function HomePage() {
   return (
@@ -21,6 +18,4 @@ export default function HomePage() {
       <Footer />
     </div>
   );
-    
-  
 }

@@ -1,5 +1,5 @@
 import { GoPaperAirplane } from "react-icons/go";
-import QR from "../../Assets/qr-code.svg"; // Import your QR code image here
+// import QR from "../../Assets/qr-code.svg"; // Import your QR code image here
 
 const Footer = () => {
   return (
@@ -52,7 +52,7 @@ const Footer = () => {
       <div className="download-app flex flex-col gap-4">
         <h3 className="font-bold text-lg">Download App</h3>
         <div className="qr-code mx-auto">
-          <img src={QR} alt="QR Code" className="w-24 h-24" />
+          <img src='/qr-code.svg' alt="QR Code" className="w-24 h-24" />
         </div>
       </div>
     </footer>
