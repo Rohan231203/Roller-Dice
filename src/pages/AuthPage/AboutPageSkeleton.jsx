@@ -16,6 +16,7 @@ const AboutPageSkeleton = () => {
         <div className="homepage w-5/6 rounded-none py-6 px-32 flex flex-col gap-8 items-center">
           <div className="w-[200px] h-[50px] skeleton rounded-2xl"></div>
           <div className="w-full h-[250px] skeleton"></div>
+          <div className="circle-container-skeleton"></div>
         </div>
       </div>
     </div>
