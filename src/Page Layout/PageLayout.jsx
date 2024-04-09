@@ -1,16 +1,15 @@
-
-import PropTypes from 'prop-types';
-import { useLocation } from 'react-router-dom';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { auth } from '../firebase/firebase';
-import Sidebar from '../components/Sidebar/Sidebar';
-import LogInNav from '../components/LogInNav/LogInNav';
+import PropTypes from "prop-types";
+import { useLocation } from "react-router-dom";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase/firebase";
+import Sidebar from "../components/Sidebar/Sidebar";
+import LogInNav from "../components/LogInNav/LogInNav";
 
 export default function PageLayout({ children }) {
   const { pathname } = useLocation();
   const [user, loading] = useAuthState(auth);
-  const canRenderSidebar = pathname !== '/auth' && user;
-  const canRenderNavbar = !user && !loading && pathname !== '/auth';
+  const canRenderSidebar = pathname !== "/auth" && user;
+  const canRenderNavbar = !user && !loading && pathname !== "/auth";
   const checkingUserIsAuth = !user && loading;
 
   if (checkingUserIsAuth) {
@@ -18,7 +17,7 @@ export default function PageLayout({ children }) {
   }
 
   return (
-    <div className={`flex ${canRenderNavbar ? 'flex-col' : 'flex-row'}`}>
+    <div className={`flex ${canRenderNavbar ? "flex-col" : "flex-row"}`}>
       {/* sidebar on the left */}
       {canRenderSidebar && (
         <div className="w-70 md:w-240">
