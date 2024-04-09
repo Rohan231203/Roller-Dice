@@ -4,7 +4,7 @@ import Modal2 from "../Modal/Modal2";
 
 const FeedPost = ({ item }) => {
   return (
-    <article className="itemCard min-w-[300px] p-4 rounded-xl flex flex-col hover:scale-10 cursor-pointer bg-gray-800 shadow-gray-200">
+    <article className="itemCard min-w-[300px] p-4 rounded-xl flex flex-col hover:scale-10 bg-gray-800 shadow-gray-200">
       <div className="mb-4 rounded-xl w-full h-40">
         {item.imageURL && (
           <img
