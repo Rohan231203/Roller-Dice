@@ -5,7 +5,7 @@ import { MdOutlineQuestionMark } from "react-icons/md";
 import { LuLogOut } from "react-icons/lu";
 import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-import "animate.css"
+import "animate.css";
 
 import useLogout from "../../hooks/useLogout";
 import Modal from "../Modal/Modal";
@@ -36,10 +36,12 @@ const Sidebar = () => {
             <li>About us</li>
           </div>
         </Link>
-        <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
-          <MdOutlineQuestionMark size={24} />
-          <li>FAQs</li>
-        </div>
+        <Link to="/faq">
+          <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
+            <MdOutlineQuestionMark size={24} />
+            <li>FAQs</li>
+          </div>
+        </Link>
         <div className="faq-item w-full flex items-center text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.5rem] h-[2.5rem] animate__animated animate__backInLeft ">
           <FaPlus />
           <Modal />

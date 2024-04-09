@@ -3,7 +3,7 @@ import { GoPaperAirplane } from "react-icons/go";
 
 const Footer = () => {
   return (
-    <footer className="flex w-full  justify-between items-start bg-black px-8 pt-8 pb-16 text-white">
+    <footer className="flex w-full justify-between items-start bg-black px-24 pt-8 pb-16 text-white">
       <div className="subscribe flex flex-col gap-6">
         <h3 className="font-bold text-lg">Subscribe</h3>
         <p className="text-base font-normal">Get product info in your mail</p>
@@ -52,7 +52,7 @@ const Footer = () => {
       <div className="download-app flex flex-col gap-4">
         <h3 className="font-bold text-lg">Download App</h3>
         <div className="qr-code mx-auto">
-          <img src='/qr-code.svg' alt="QR Code" className="w-24 h-24" />
+          <img src="/qr-code.svg" alt="QR Code" className="w-24 h-24" />
         </div>
       </div>
     </footer>
