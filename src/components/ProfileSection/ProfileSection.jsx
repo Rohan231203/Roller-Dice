@@ -1,10 +1,17 @@
 /* eslint-disable no-unused-vars */
 
+import useAuthStore from "../../store/authStore";
+import useUserProfileStore from "../../store/userProfileStore";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 
 
+
 const ProfileSection = () => {
+  const{userProfile}=useUserProfileStore();
+  const authUser=useAuthStore((state)=>state.user)
+  // const visitingOwnProfileAndAuth = authUser && authUser.username === userProfile.username;
+	// const visitingAnotherProfileAndAuth = authUser && authUser.username !== userProfile.username;
   return (
     <div className="flex flex-col bg-white w-5/6 overflow-y-scroll" style={{height: "calc(100vh - var(--navbar-height))"}}>
       <div className="flex flex-row m-0 p-10 justify-start gap-14 items-center">
