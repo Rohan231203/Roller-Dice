@@ -13,7 +13,7 @@ const ProfileSection = () => {
   // const visitingOwnProfileAndAuth = authUser && authUser.username === userProfile.username;
 	// const visitingAnotherProfileAndAuth = authUser && authUser.username !== userProfile.username;
   return (
-    <div className="flex flex-col bg-[#141414] w-5/6 overflow-y-scroll" style={{height: "calc(100vh - var(--navbar-height))"}}>
+    <div className="flex flex-col bg-gradient-to-b from-[#080D15] to-gray-900 w-5/6 overflow-y-scroll" style={{height: "calc(100vh - var(--navbar-height))"}}>
       <div className="flex flex-row m-0 p-10 justify-start gap-14 items-center">
         <div className="avatar">
           <div className="w-24 h-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

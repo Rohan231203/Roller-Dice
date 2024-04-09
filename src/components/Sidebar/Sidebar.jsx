@@ -47,9 +47,9 @@ const Sidebar = () => {
           <Modal />
         </div>
       </ul>
-      <div className="listings-item w-full flex items-center gap-6 text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 active:bg-slate-400 px-[1.4rem] h-[2.5rem] ">
+      <div className="listings-item w-full flex items-center gap-6 text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-100 active:bg-slate-400 px-[1.4rem] h-[2.5rem] hover:text-black ">
         <LuLogOut size={24} color="red" className="rotate-180" />
-        <h2 className="text-red-600" onClick={handleLogout}>
+        <h2 className="text-red-500 font-Poppins " onClick={handleLogout}>
           Logout
         </h2>
       </div>
