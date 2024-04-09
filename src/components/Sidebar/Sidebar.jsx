@@ -35,10 +35,12 @@ const Sidebar = () => {
             <li>About us</li>
           </div>
         </Link>
-        <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] ">
-          <MdOutlineQuestionMark size={19} />
-          <li>FAQs</li>
-        </div>
+        <Link to="/faq">
+          <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] ">
+            <MdOutlineQuestionMark size={19} />
+            <li>FAQs</li>
+          </div>
+        </Link>
         <div className="faq-item w-full flex items-center text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 hover:text-black active:bg-slate-400 px-[1.5rem] h-[2.5rem] ">
           <FaPlus />
           <Modal />
