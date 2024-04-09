@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import College from "../../Assets/college.svg";
 import { useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiLockPasswordLine } from "react-icons/ri";
 import LogInNav from "../LogInNav/LogInNav";
 import useLogin from "../../hooks/useLogin";
+import { Link } from "react-router-dom";
 
 const LoginSection = () => {
   const [inputs, setInputs] = useState({
@@ -15,16 +15,18 @@ const LoginSection = () => {
   const { loading, error, login } = useLogin();
   return (
     <>
-      <LogInNav />
-      <main
-        className="w-full pb-[3rem] px-[6rem] bg-white flex relative mt-[4rem]"
-        style={{ height: "calc(100vh - 4rem)" }}
-      >
+      {/* <LogInNav /> */}
+      <main className="w-full pb-[3rem] px-[6rem] bg-white flex relative h-screen">
         <div className="hero-img w-3/6">
-          <img src={College} alt="College.svg" width="550px" height="550px" />
+          <img
+            src="college.svg"
+            alt="College.svg"
+            width="550px"
+            height="550px"
+          />
         </div>
-        <section className="w-3/6 flex items-center justify-center flex-col ">
-          <div className="login-container flex items-start flex-col gap-8 p-[1.5rem]">
+        <section className="w-3/6 flex items-center justify-center flex-col">
+          <div className="login-container flex items-start flex-col gap-8 p-[1.5rem] border-2">
             <div className="header-login flex flex-col gap-3">
               <h2 className="text-3xl text-black font-bold">
                 Login in to VelocityMart
@@ -69,11 +71,11 @@ const LoginSection = () => {
               </button>
               <div
                 type="button"
-                className="flex gap-2 justify-center items-center text-black text-sm font-medium px-6 py-2 rounded-sm hover:decoration-2"
+                className="flex gap-2 justify-center items-center text-black text-sm font-medium px-6 py-2 rounded-sm hover:decoration-2 mt-3"
               >
-                <p>Don't have an account</p>
+                <p className="font-normal">Don't have an account</p>
                 <span className="underline underline-offset-4 decoration-2 cursor-pointer">
-                  <a href="">Sign up</a>
+                  <Link to="/signup">Sign Up</Link>
                 </span>
               </div>
             </div>

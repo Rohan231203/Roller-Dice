@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import { GiElectricalResistance } from "react-icons/gi";
 import { CgGym } from "react-icons/cg";
 import { IoBookSharp } from "react-icons/io5";
@@ -6,10 +6,10 @@ import { FaBucket } from "react-icons/fa6";
 import { FaCartPlus } from "react-icons/fa6";
 import Slideshow from "../Slideshow/Slideshow";
 import FilteredSportsAndGym from "../../pages/FilteredPage/FilteredSportsAndGym";
-import FilteredElectricalAndMechanics from '../../pages/FilteredPage/FilteredElectricalAndMechanics';
-import FilteredAcademics from '../../pages/FilteredPage/FilteredAcademics';
-import FilteredAmeneties from '../../pages/FilteredPage/FilteredAmeneties';
-import FeedPosts from '../FeedPosts/FeedPosts';
+import FilteredElectricalAndMechanics from "../../pages/FilteredPage/FilteredElectricalAndMechanics";
+import FilteredAcademics from "../../pages/FilteredPage/FilteredAcademics";
+import FilteredAmeneties from "../../pages/FilteredPage/FilteredAmeneties";
+import FeedPosts from "../FeedPosts/FeedPosts";
 
 const HomeSection = () => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
@@ -46,7 +46,10 @@ const HomeSection = () => {
   ];
 
   return (
-    <main className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden bg-gradient-to-b from-[#101826] to-[#06090E]" style={{ height: "calc(100vh - var(--navbar-height))" }}>
+    <main
+      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden bg-gradient-to-b from-[#101826] to-[#06090E]"
+      style={{ height: "calc(100vh - var(--navbar-height))" }}
+    >
       <Slideshow />
       <div className="divider"></div>
       {/* categories */}
@@ -57,7 +60,9 @@ const HomeSection = () => {
         <div className="categories-container flex justify-between animation-element">
           {categoryList.map((catItem, index) => (
             <div
-              className={`catItem border-[3px] rounded-xl bg-transparent border-neutral-200 h-[10rem] w-[10rem] text-neutral-300 font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:tezt-black cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent animate_animated hover:animate__pulse ${selectedCategoryIndex === index ? 'selected' : ''}`}
+              className={`catItem border-[3px] rounded-xl bg-transparent border-neutral-200 h-[10rem] w-[10rem] text-neutral-300 font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:tezt-black cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent animate_animated hover:animate__pulse ${
+                selectedCategoryIndex === index ? "selected" : ""
+              }`}
               key={index}
               onClick={() => handleCategoryClick(index)}
             >
@@ -66,7 +71,7 @@ const HomeSection = () => {
             </div>
           ))}
         </div>
-       
+
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
           <div className="item-container h-96 flex">
@@ -83,9 +88,7 @@ const HomeSection = () => {
               </button>
             )}
           </div>
-         
         </div>
-       
       </div>
     </main>
   );
