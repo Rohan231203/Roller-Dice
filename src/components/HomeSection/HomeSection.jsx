@@ -10,13 +10,12 @@ import FeedPosts from "../FeedPosts/FeedPosts";
 
 const HomeSection = () => {
   const handleclick = (index) => {
-    
-    if(index===0) console.log("Electrical and Mechanical components");
-    if(index===1) console.log("Sports and gym");
-    if(index===2) console.log("Academic");
-    if(index===3) console.log("Amenities");
-    if(index===4) console.log("Others");
-  }
+    if (index === 0) console.log("Electrical and Mechanical components");
+    if (index === 1) console.log("Sports and gym");
+    if (index === 2) console.log("Academic");
+    if (index === 3) console.log("Amenities");
+    if (index === 4) console.log("Others");
+  };
   const categoryList = [
     {
       title: "Electrical and Mechanical components",
@@ -55,8 +54,9 @@ const HomeSection = () => {
             return (
               <div
                 className="catItem border-[3px] rounded-xl bg-neutral-400 border-gray-200 h-[10rem] w-[10rem] text-black font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:text-gray-300 cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent"
-                key={index} onClick={()=>handleclick(index)}>
-              
+                key={index}
+                onClick={() => handleclick(index)}
+              >
                 <h2>{catItem.title}</h2>
                 {catItem.img}
               </div>
