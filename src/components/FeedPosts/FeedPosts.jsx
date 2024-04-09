@@ -7,7 +7,7 @@ const FeedPosts = () => {
     const { isLoading, items } = useGetItems();
 
     return (
-        <div>
+        <div className="">
             {!isLoading && items.length > 0 &&
                 items.map((item) => (
                     <FeedPost key={item.id} item={item} /> // Pass each item as `item` prop

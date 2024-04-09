@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const FeedPost = ({ item }) => {
     return (
-        <div className="item-section py-10 bg-white px-10">
+        <div className="item-section py-10 bg-[#141414] px-10">
             <h1 className="text-2xl text-black font-bold mb-8">Products</h1>
             <div className="item-container h-96 w-96 object-contain flex ">
                 <article className="itemCard min-w-[300px] bg-blue-100 border-2 p-4 rounded-xl flex flex-col">

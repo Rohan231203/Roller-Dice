@@ -11,7 +11,7 @@ export default function Profilepage() {
   return (
     <div>
       {/* <ProfileSection/> */}
-
+      <LogInNav/>
       <div className="flex mt-[var(--navbar-height)]">
         <Sidebar />
         <ProfileSection />

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Notes from "../../Assets/notes.jpg";
 import Dumbbell from "../../Assets/dumbbell.webp";
 import SolderingIron from "../../Assets/soldering-iron.webp";
@@ -20,7 +20,7 @@ function Slideshow() {
     let dots = document.getElementsByClassName("dot");
 
     if (n > slides.length) {
-      newSlideIndex = 1;
+      newSlideIndex = 1; // Reset to the first slide
     } else if (n < 1) {
       newSlideIndex = slides.length;
     }
@@ -32,29 +32,35 @@ function Slideshow() {
       dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    slides[newSlideIndex - 1].style.display = "block";
+    dots[newSlideIndex - 1].className += " active";
 
     setSlideIndex(newSlideIndex);
   }
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      plusSlides(1); // Auto-advance to the next slide every 2 seconds
+    }, 2000);
+
+    // Clean up the interval on component unmount
+    return () => clearInterval(interval);
+  }, [slideIndex]);
 
   return (
     <div>
       <div className="slideshow-container max-w-full mx-auto relative max-h-[400px] overflow-hidden flex justify-center items-center">
         <div className="mySlides fade mx-auto">
-          {/* <div className="numbertext">1 / 3</div> */}
-          <img src={Notes} className="w-[600px]" alt="Slide 1" />
+          <img src={Notes} className="w-[100%] cover" alt="Slide 1" />
           <div className="text">Caption Text</div>
         </div>
 
         <div className="mySlides fade mx-auto">
-          {/* <div className="numbertext">2 / 3</div> */}
           <img src={Dumbbell} className="w-[600px]" alt="Slide 2" />
           <div className="text">Caption Two</div>
         </div>
 
         <div className="mySlides fade mx-auto">
-          {/* <div className="numbertext">3 / 3</div> */}
           <img src={SolderingIron} className="w-[600px]" alt="Slide 3" />
           <div className="text">Caption Three</div>
         </div>
