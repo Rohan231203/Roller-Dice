@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
 import useSellitems from "../../hooks/useSellitems";
 import usePreviewImg from "../../hooks/usePreviewImg";
@@ -12,8 +13,15 @@ const Modal = () => {
   const { isLoading, handleSellItem } = useSellitems();
   const imageRef = useRef(null);
   const { handleImageChange, selectedFile, setSelectedFile } = usePreviewImg();
+  const modalRef = useRef(null); // Ref to the dialog element
 
   const handleSellingItem = async () => {
+    // Validate if any field is empty
+    if (!inputs.title || !inputs.description || !inputs.category || !selectedFile) {
+      toast.error("Please fill in all fields and select an image");
+      return;
+    }
+
     try {
       await handleSellItem(
         selectedFile,
@@ -22,6 +30,13 @@ const Modal = () => {
         inputs.category
       );
       setSelectedFile(null);
+      setInputs({
+        title: "",
+        description: "",
+        category: "",
+      }); // Clear input fields after successful submission
+      modalRef.current.close(); // Close the modal
+      toast.success("Item successfully listed");
     } catch (error) {
       toast.error(error.message);
     }
@@ -31,11 +46,11 @@ const Modal = () => {
     <div className="w-full">
       <button
         className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-[#b6b5b5] text-base font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
-        onClick={() => document.getElementById("my_modal_3").showModal()}
+        onClick={() => modalRef.current.showModal()}
       >
         Post item
       </button>
-      <dialog id="my_modal_3" className="modal ">
+      <dialog id="my_modal_3" className="modal" ref={modalRef}>
         <div className="modal-box">
           <form method="dialog">
             <button className="btn btn-sm btn-circle btn-primary absolute right-2 top-2">

@@ -58,7 +58,7 @@ export default function useSellitems() {
             toast.success("Your Item is Listed Succesfully")
         }
         catch(error){
-            toast.error("Error.message");
+            toast.error(error.message);
         }
         finally{
             setIsLoading(false)
