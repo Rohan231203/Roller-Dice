@@ -1,4 +1,4 @@
-// import React from 'react'
+import PropTypes from "prop-types";
 import { useLocation } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase/firebase";
@@ -11,8 +11,10 @@ export default function PageLayout({ children }) {
   const canRenderSidebar = pathname !== "/auth" && user;
   const canRenderNavbar = !user && !loading && pathname !== "/auth";
   const checkingUserIsAuth = !user && loading;
-  if (checkingUserIsAuth) return;
-  <span className="loading loading-ball loading-lg"></span>;
+
+  if (checkingUserIsAuth) {
+    return <span className="loading loading-ball loading-lg"></span>;
+  }
 
   return (
     <div className={`flex ${canRenderNavbar ? "flex-col" : "flex-row"}`}>
@@ -28,3 +30,7 @@ export default function PageLayout({ children }) {
     </div>
   );
 }
+
+PageLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
