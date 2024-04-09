@@ -11,6 +11,9 @@ export default {
         custom: "2px 2px 5px 0px rgba(0,0,0,0.75)",
       },
     },
+    fontFamily: {
+      Poppins: ["Poppins, sans-serif"]
+    },
   },
   variants: {
     extend: {
@@ -18,6 +21,7 @@ export default {
       textColor: ["focus"], // Enable focus variant for textColor
       placeholderColor: ["focus"], // Enable focus variant for placeholderColor
     },
+
     
   },
   // eslint-disable-next-line no-undef

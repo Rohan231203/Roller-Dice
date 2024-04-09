@@ -30,6 +30,9 @@ const Sidebar = () => {
         </div>
         <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]">
           <MdOutlineQuestionMark size={19} />
+        </div>
+        <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]">
+          <MdOutlineQuestionMark size={19} />
           <li>FAQs</li>
         </div>
         <div className="faq-item">

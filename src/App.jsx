@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import "./index.css";
 import { Toaster } from "react-hot-toast";
 import { useAuthState } from "react-firebase-hooks/auth";
