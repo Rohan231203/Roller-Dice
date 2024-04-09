@@ -37,6 +37,7 @@ function App() {
         />
         <Route path="/profile" element={<Profilepage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/test" element={<TestPage />} />
         <Route path="/faq" element={<FAQPage />} />
       </Routes>
       <Toaster />

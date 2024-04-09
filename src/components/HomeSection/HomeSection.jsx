@@ -18,7 +18,7 @@ const HomeSection = () => {
   };
   const categoryList = [
     {
-      title: "Electrical and Mechanical components",
+      title: "Electrical components",
       img: <GiElectricalResistance size={30} />,
     },
     {
@@ -34,18 +34,18 @@ const HomeSection = () => {
       img: <FaBucket size={30} />,
     },
     {
-      title: "Others",
+      title: "Mechanical components",
       img: <FaCartPlus size={30} />,
     },
   ];
   return (
     <main
-      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden "
+      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden bg-gradient-to-b from-[#090e16] to-[#06090E]"
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
       <Slideshow />
       {/* categories */}
-      <div className="categories w-full bg-[#141414] px-10 pt-10 m-0">
+      <div className="categories w-full bg-transparent px-10 pt-10 m-0 bg-gradient-to-b from-[#06090E] to-gray-900">
         <h2 className="text-2xl font-bold text-gray-200 mb-10">
           Browse by categories
         </h2>
@@ -53,7 +53,7 @@ const HomeSection = () => {
           {categoryList.map((catItem, index) => {
             return (
               <div
-                className="catItem border-[3px] rounded-xl bg-neutral-400 border-gray-200 h-[10rem] w-[10rem] text-black font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:text-gray-300 cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent  animate_animated hover:animate__pulse"
+                className="catItem border-[3px] rounded-xl bg-transparent border-neutral-200 h-[10rem] w-[10rem] text-neutral-300 font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:tezt-black cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent  animate_animated hover:animate__pulse"
                 key={index}
                 onClick={() => handleclick(index)}
               >
@@ -63,7 +63,7 @@ const HomeSection = () => {
             );
           })}
         </div>
-        <div className="item-section py-10 bg-[#141414] w-auto overflow-x-scroll">
+        <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
           <div className="item-container h-96 flex">
             <FeedPosts />

@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import "animate.css"
-
+import "animate.css";
 
 function Slideshow() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -46,29 +45,40 @@ function Slideshow() {
 
   return (
     <div>
-      <div className="slideshow-container max-w-[70%] mx-auto relative max-h-[450px] overflow-hidden flex justify-center items-center h-[400px]  rounded-lg">
+      <div className="slideshow-container max-w-[80%] mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center h-[450px]  rounded-lg">
         <div className="sub-container border-white ">
-        <div className="mySlides fade mx-auto animate__animated " key={1}>
-          <img src="vit1.jpg" className=" object-cover h-[350px] " alt="Slide 1" />
-          
+          <div className="mySlides fade mx-auto animate__animated " key={1}>
+            <img
+              src="college-1.svg"
+              className=" object-cover h-[400px] shadow-md"
+              alt="Slide 1"
+            />
+          </div>
+
+          <div className="mySlides fade mx-auto animate__animated " key={2}>
+            <img
+              src="college-2.svg"
+              className="object-cover h-[400px] brightness-125 shadow-md"
+              alt="Slide 2"
+            />
+          </div>
+
+          <div className="mySlides fade mx-auto animate__animated " key={3}>
+            <img
+              src="college-3.svg"
+              className="object-cover h-[400px] brightness-125 shadow-md"
+              alt="Slide 3"
+            />
+          </div>
+
+          <div className="mySlides fade mx-auto animate__animated " key={4}>
+            <img
+              src="college-4.svg"
+              className="object-cover h-[400px] brightness-125 shadow-md"
+              alt="Slide 4"
+            />
+          </div>
         </div>
-
-        <div className="mySlides fade mx-auto animate__animated " key={2}>
-          <img src="vit2.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 2" />
-          
-        </div>
-
-   
-
-        <div className="mySlides fade mx-auto animate__animated " key={4}>
-          <img src="vit4.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 4" />
-          
-        </div>
-
-        </div>
-        
-
-       
       </div>
       <br />
 
