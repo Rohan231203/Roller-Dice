@@ -1,12 +1,39 @@
+import { useRef, useState } from "react";
+import useSellitems from "../../hooks/useSellitems";
+import usePreviewImg from "../../hooks/usePreviewImg";
+import toast from "react-hot-toast";
+
 const Modal = () => {
+  const [inputs, setInputs] = useState({
+    title: "",
+    description: "",
+    category: "",
+  });
+  const { isLoading, handleSellItem } = useSellitems();
+  const imageRef = useRef(null);
+  const { handleImageChange, selectedFile, setSelectedFile } = usePreviewImg();
+
+  const handleSellingItem = async () => {
+    try {
+      await handleSellItem(
+        selectedFile,
+        inputs.title,
+        inputs.description,
+        inputs.category
+      );
+      setSelectedFile(null);
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
+
   return (
     <div className="w-full">
       <button
-        className="flex w-full px-[1.5rem] items-center gap-0 text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 hover:text-black active:bg-slate-400  h-[2.5rem]"
+        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-[#b6b5b5] text-lg font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]"
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
-        {/* <FaPlus /> */}
-        <span className="w-full">Post item</span>
+        Post item
       </button>
       <dialog id="my_modal_3" className="modal ">
         <div className="modal-box">
@@ -15,37 +42,49 @@ const Modal = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg text-gray-300">
-            Enter Inputs For Listing Item
-          </h3>
+          <h3 className="font-bold text-lg">Enter Inputs For Listing Item</h3>
 
           <input
             type="text"
             placeholder="Enter Title"
             className="input input-bordered border-2 input-ghost w-full max-w-xs mt-5"
+            value={inputs.title}
+            onChange={(e) => setInputs({ ...inputs, title: e.target.value })}
           />
           <textarea
             placeholder="Describe Your Product"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 px-4 py-2"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5"
+            value={inputs.description}
+            onChange={(e) =>
+              setInputs({ ...inputs, description: e.target.value })
+            }
           ></textarea>
           <label className="form-control w-full max-w-xs">
             <div className="label">
-              <span className="label-text text-gray-300">
+              <span className="label-text">
                 Pick the best fantasy franchise
               </span>
+              <span className="label-text-alt">Alt label</span>
             </div>
-            <select className="select select-bordered" id="">
-              <option disabled selected className="text-gray-300">
+            <select
+              className="select select-bordered"
+              id=""
+              onChange={(e) =>
+                setInputs({ ...inputs, category: e.target.value })
+              }
+              value={inputs.category}
+            >
+              <option disabled value="">
                 Pick one
               </option>
-              <option>Star Wars</option>
-              <option>Harry Potter</option>
-              <option>Lord of the Rings</option>
-              <option>Planet of the Apes</option>
-              <option>Star Trek</option>
+              <option>Electrical And Mechanics</option>
+              <option>Academics</option>
+              <option>Ameneties</option>
+              <option>Sports And Gym</option>
+              <option>Others</option>
             </select>
             <div className="label">
-              <span className="label-text-alt"></span>
+              <span className="label-text-alt">Alt label</span>
             </div>
           </label>
 
@@ -54,12 +93,18 @@ const Modal = () => {
               type="file"
               className="py-4"
               placeholder="Enter Image of Item here"
+              ref={imageRef}
+              onChange={handleImageChange}
             />
-            <button type="submit" className="btn btn-primary mt-3 text-lg">
+            <button
+              type="submit"
+              className="btn btn-primary mt-3"
+              onClick={handleSellingItem}
+            >
               Submit
             </button>
           </div>
-        </div>{" "}
+        </div>
       </dialog>
     </div>
   );
