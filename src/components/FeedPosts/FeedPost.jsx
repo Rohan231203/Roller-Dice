@@ -15,7 +15,7 @@ const FeedPost = ({ item }) => {
         )}
       </div>
       <h2 className="text-xl font-bold text-gray-100">{item.title}</h2>
-      <p className="text-black text-sm font-medium overflow-hidden line-clamp-3">
+      <p className="text-gray-400 text-md font-medium overflow-hidden line-clamp-3 mt-2">
         {item.description}
       </p>
       <div className=" mt-auto">

@@ -1,8 +1,9 @@
-import App1 from "../components/App1";
+import Login from "./Login";
+import LoginSection from "../components/AuthForm/LoginSection";
 const TestPage = () => {
   return (
     <div>
-      <App1 />
+      <LoginSection />
     </div>
   );
 };

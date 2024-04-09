@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 const FAQ = () => {
   return (
-    <div className="faq-section w-5/6 px-[5rem] py-[3rem] flex flex-col items-center gap-8 bg-gradient-to-b from-[#080D15] to-gray-900">
-      <h1 className="text-[#b6b5b5] text-3xl font-medium">
+    <div
+      className="faq-section w-5/6 px-[5rem] py-[2rem] flex flex-col items-center gap-8 bg-gradient-to-b from-[#080D15] to-gray-900 overflow-y-auto"
+      style={{ maxHeight: "calc(100vh - 4rem)" }}
+    >
+      <h1 className="text-white text-3xl font-medium">
         Frequently Asked Questions
       </h1>
       <div className="flex flex-col gap-4 w-full">

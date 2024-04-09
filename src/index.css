@@ -45,3 +45,15 @@ div::-webkit-scrollbar {
 div {
   scrollbar-width: none;
 }
+
+.fade {
+  transition: opacity 1s ease-in-out;
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.opacity-100 {
+  opacity: 1;
+}

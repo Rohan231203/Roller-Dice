@@ -17,7 +17,12 @@ const Modal = () => {
 
   const handleSellingItem = async () => {
     // Validate if any field is empty
-    if (!inputs.title || !inputs.description || !inputs.category || !selectedFile) {
+    if (
+      !inputs.title ||
+      !inputs.description ||
+      !inputs.category ||
+      !selectedFile
+    ) {
       toast.error("Please fill in all fields and select an image");
       return;
     }
@@ -57,7 +62,9 @@ const Modal = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg text-white">Enter Inputs For Listing Item</h3>
+          <h3 className="font-bold text-lg text-white">
+            Enter Inputs For Listing Item
+          </h3>
 
           <input
             type="text"
@@ -68,7 +75,7 @@ const Modal = () => {
           />
           <textarea
             placeholder="Describe Your Product"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 text-white"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 p-4 text-white"
             value={inputs.description}
             onChange={(e) =>
               setInputs({ ...inputs, description: e.target.value })
@@ -76,9 +83,7 @@ const Modal = () => {
           ></textarea>
           <label className="form-control w-full max-w-xs">
             <div className="label">
-              <span className="label-text ">
-                Pick Your Category
-              </span>
+              <span className="label-text ">Pick Your Category</span>
               <span className="label-text-alt">Alt label</span>
             </div>
             <select
