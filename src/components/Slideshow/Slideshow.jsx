@@ -45,8 +45,8 @@ function Slideshow() {
 
   return (
     <div>
-      <div className="slideshow-container max-w-[80%] mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center h-[450px]  rounded-lg">
-        <div className="sub-container border-white ">
+      <div className="slideshow-container max-w-full h-screen  mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center rounded-lg">
+        <div className="sub-container border-white  ">
           <div className="mySlides fade mx-auto animate__animated " key={1}>
             <img
               src="college-1.svg"

@@ -19,37 +19,37 @@ const Sidebar = () => {
     >
       <ul className="w-full flex flex-col gap-3 ">
         <Link to="/profile">
-          <div className="profile-item w-full flex items-center gap-6 text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft">
+          <div className="profile-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft">
             <CgProfile size={24} />
             <Link to="/profile">Profile</Link>
           </div>
         </Link>
         <Link to="/">
-          <div className="home-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
+          <div className="home-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
             <IoHomeOutline size={24} />
             <li>Home</li>
           </div>
         </Link>
         <Link to="/about">
-          <div className="about-item w-full flex items-center gap-6  text-md font-semibold cursor-pointer rounded-xl text-[#b6b5b5]  hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft">
+          <div className="about-item w-full flex items-center gap-6  text-md font-semibold cursor-pointer rounded-xl text-white text-lg hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft">
             <RiTeamLine size={24} />
             <li>About us</li>
           </div>
         </Link>
         <Link to="/faq">
-          <div className="faq-item w-full flex items-center gap-6 text-[#b6b5b5]  text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
+          <div className="faq-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
             <MdOutlineQuestionMark size={24} />
             <li>FAQs</li>
           </div>
         </Link>
-        <div className="faq-item w-full flex items-center text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.5rem] h-[2.5rem] animate__animated animate__backInLeft ">
+        <div className="faq-item w-full flex items-center text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.5rem] h-[2.5rem] animate__animated animate__backInLeft ">
           <FaPlus />
           <Modal />
         </div>
       </ul>
-      <div className="listings-item w-full flex items-center gap-6 text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 active:bg-slate-400 px-[1.4rem] h-[2.5rem] ">
+      <div className="listings-item w-full flex items-center gap-6 text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-100 active:bg-slate-400 px-[1.4rem] h-[2.5rem] hover:text-black ">
         <LuLogOut size={24} color="red" className="rotate-180" />
-        <h2 className="text-red-600" onClick={handleLogout}>
+        <h2 className="text-red-500 font-Poppins " onClick={handleLogout}>
           Logout
         </h2>
       </div>

@@ -45,7 +45,7 @@ const Modal = () => {
   return (
     <div className="w-full">
       <button
-        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-[#b6b5b5] text-base font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
+        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-white  text-base font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
         onClick={() => modalRef.current.showModal()}
       >
         Post Item
@@ -53,22 +53,22 @@ const Modal = () => {
       <dialog id="my_modal_3" className="modal" ref={modalRef}>
         <div className="modal-box">
           <form method="dialog">
-            <button className="btn btn-sm btn-circle btn-primary absolute right-2 top-2">
+            <button className="btn btn-sm btn-circle bg-red-500 text-white absolute right-2 top-2">
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">Enter Inputs For Listing Item</h3>
+          <h3 className="font-bold text-lg text-white">Enter Inputs For Listing Item</h3>
 
           <input
             type="text"
             placeholder="Enter Title"
-            className="input input-bordered border-2 input-ghost w-full max-w-xs mt-5"
+            className="input input-bordered border-2 input-ghost w-full max-w-xs mt-5 text-white"
             value={inputs.title}
             onChange={(e) => setInputs({ ...inputs, title: e.target.value })}
           />
           <textarea
             placeholder="Describe Your Product"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 text-white"
             value={inputs.description}
             onChange={(e) =>
               setInputs({ ...inputs, description: e.target.value })
@@ -76,13 +76,13 @@ const Modal = () => {
           ></textarea>
           <label className="form-control w-full max-w-xs">
             <div className="label">
-              <span className="label-text">
-                Pick the best fantasy franchise
+              <span className="label-text ">
+                Pick Your Category
               </span>
               <span className="label-text-alt">Alt label</span>
             </div>
             <select
-              className="select select-bordered"
+              className="select select-bordered text-white"
               id=""
               onChange={(e) =>
                 setInputs({ ...inputs, category: e.target.value })
@@ -103,7 +103,7 @@ const Modal = () => {
             </div>
           </label>
 
-          <div className="input-submit-container flex flex-col justify-between ">
+          <div className="input-submit-container flex flex-col justify-between text-white placeholder-text-white focus:placeholder-text-white">
             <input
               type="file"
               className="py-4"
@@ -113,7 +113,7 @@ const Modal = () => {
             />
             <button
               type="submit"
-              className="btn btn-primary mt-3"
+              className="btn bg-red-500 text-white mt-3"
               onClick={handleSellingItem}
             >
               Submit
