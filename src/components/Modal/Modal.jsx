@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
 import useSellitems from "../../hooks/useSellitems";
 import usePreviewImg from "../../hooks/usePreviewImg";
