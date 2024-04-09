@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import PropTypes from "prop-types";
+import Modal2 from "../Modal/Modal2";
 
 const FeedPost = ({ item }) => {
   return (
@@ -16,10 +18,8 @@ const FeedPost = ({ item }) => {
       <p className="text-slate-700 text-sm font-medium overflow-hidden line-clamp-3">
         {item.description}
       </p>
-      <div className="button-div mt-auto">
-        <button type="button" className="btn text-base text-white w-full mt-4">
-          Connect To Owner
-        </button>
+      <div className=" mt-auto">
+        <Modal2 />
       </div>
     </article>
   );

@@ -2,10 +2,11 @@ const Modal = () => {
   return (
     <div className="w-full">
       <button
-        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-[#b6b5b5] text-lg font-semibold cursor-pointer rounded-xl hover:bg-slate-200 active:bg-slate-400 px-[1.4rem] h-[2.5rem]"
+        className="flex w-full px-[1.5rem] items-center gap-0 text-[#b6b5b5] text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-300 hover:text-black active:bg-slate-400  h-[2.5rem]"
         onClick={() => document.getElementById("my_modal_3").showModal()}
       >
-        Post item
+        {/* <FaPlus /> */}
+        <span className="w-full">Post item</span>
       </button>
       <dialog id="my_modal_3" className="modal ">
         <div className="modal-box">
@@ -14,7 +15,9 @@ const Modal = () => {
               ✕
             </button>
           </form>
-          <h3 className="font-bold text-lg">Enter Inputs For Listing Item</h3>
+          <h3 className="font-bold text-lg text-gray-300">
+            Enter Inputs For Listing Item
+          </h3>
 
           <input
             type="text"
@@ -23,17 +26,16 @@ const Modal = () => {
           />
           <textarea
             placeholder="Describe Your Product"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5"
+            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 px-4 py-2"
           ></textarea>
           <label className="form-control w-full max-w-xs">
             <div className="label">
-              <span className="label-text">
+              <span className="label-text text-gray-300">
                 Pick the best fantasy franchise
               </span>
-              <span className="label-text-alt">Alt label</span>
             </div>
             <select className="select select-bordered" id="">
-              <option disabled selected>
+              <option disabled selected className="text-gray-300">
                 Pick one
               </option>
               <option>Star Wars</option>
@@ -43,7 +45,7 @@ const Modal = () => {
               <option>Star Trek</option>
             </select>
             <div className="label">
-              <span className="label-text-alt">Alt label</span>
+              <span className="label-text-alt"></span>
             </div>
           </label>
 
@@ -53,11 +55,11 @@ const Modal = () => {
               className="py-4"
               placeholder="Enter Image of Item here"
             />
-            <button type="submit" className="btn btn-primary mt-3">
+            <button type="submit" className="btn btn-primary mt-3 text-lg">
               Submit
             </button>
           </div>
-        </div>
+        </div>{" "}
       </dialog>
     </div>
   );
