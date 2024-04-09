@@ -33,13 +33,11 @@ const HomeSection = () => {
   ];
   return (
     <main
-      className="w-5/6 overflow-y-auto flex flex-col scrollbar-hidden "
+      className="w-5/6 overflow-y-auto  flex flex-col scrollbar-hidden "
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
-      
-
       <Slideshow />
-{/* categories */}
+      {/* categories */}
       <div className="categories w-full bg-[#141414] px-10 pt-10 m-0">
         <h2 className="text-2xl font-bold text-gray-200 mb-10">
           Browse by categories
@@ -57,11 +55,11 @@ const HomeSection = () => {
             );
           })}
         </div>
-      </div>
-      <div className="item-section py-10 bg-white px-10">
-        <h1 className="text-2xl text-black font-bold mb-8">Products</h1>
-        <div className="item-container h-96 w-96 object-contain flex">
-          <FeedPosts />
+        <div className="item-section py-10 bg-[#141414] w-auto overflow-x-scroll">
+          <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
+          <div className="item-container h-96 flex">
+            <FeedPosts />
+          </div>
         </div>
       </div>
     </main>
