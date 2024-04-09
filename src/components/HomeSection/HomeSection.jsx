@@ -53,7 +53,7 @@ const HomeSection = () => {
           {categoryList.map((catItem, index) => {
             return (
               <div
-                className="catItem border-[3px] rounded-xl bg-neutral-400 border-gray-200 h-[10rem] w-[10rem] text-black font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:text-gray-300 cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent"
+                className="catItem border-[3px] rounded-xl bg-neutral-400 border-gray-200 h-[10rem] w-[10rem] text-black font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:text-gray-300 cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent  animate_animated hover:animate__pulse"
                 key={index}
                 onClick={() => handleclick(index)}
               >

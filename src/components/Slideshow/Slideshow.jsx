@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
+import "animate.css"
 
 
 function Slideshow() {
-  const [slideIndex, setSlideIndex] = useState(1);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   function plusSlides(n) {
     showSlides(slideIndex + n);
@@ -17,10 +18,10 @@ function Slideshow() {
     let slides = document.getElementsByClassName("mySlides");
     let dots = document.getElementsByClassName("dot");
 
-    if (n > slides.length) {
-      newSlideIndex = 1; // Reset to the first slide
-    } else if (n < 1) {
-      newSlideIndex = slides.length;
+    if (n >= slides.length) {
+      newSlideIndex = 0; // Reset to the first slide
+    } else if (n < 0) {
+      newSlideIndex = slides.length - 1;
     }
 
     for (let i = 0; i < slides.length; i++) {
@@ -30,8 +31,8 @@ function Slideshow() {
       dots[i].className = dots[i].className.replace(" active", "");
     }
 
-    slides[newSlideIndex - 1].style.display = "block";
-    dots[newSlideIndex - 1].className += " active";
+    slides[newSlideIndex].style.display = "block";
+    dots[newSlideIndex].className += " active";
 
     setSlideIndex(newSlideIndex);
   }
@@ -45,38 +46,37 @@ function Slideshow() {
 
   return (
     <div>
-      <div className="slideshow-container max-w-full mx-auto relative max-h-[400px] overflow-hidden flex justify-center items-center">
-        <div className="mySlides fade mx-auto">
-          <img src="notes.jpg" className="w-[100%] cover" alt="Slide 1" />
-          <div className="text">Caption Text</div>
+      <div className="slideshow-container max-w-[70%] mx-auto relative max-h-[450px] overflow-hidden flex justify-center items-center h-[400px]  rounded-lg">
+        <div className="sub-container border-white ">
+        <div className="mySlides fade mx-auto animate__animated " key={1}>
+          <img src="vit1.jpg" className=" object-cover h-[350px] " alt="Slide 1" />
+          
         </div>
 
-        <div className="mySlides fade mx-auto">
-          <img src="dumbbell.webp" className="w-[600px]" alt="Slide 2" />
-          <div className="text">Caption Two</div>
+        <div className="mySlides fade mx-auto animate__animated " key={2}>
+          <img src="vit2.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 2" />
+          
         </div>
 
-        <div className="mySlides fade mx-auto">
-          <img src="soldering-iron.webp" className="w-[600px]" alt="Slide 3" />
-          <div className="text">Caption Three</div>
+   
+
+        <div className="mySlides fade mx-auto animate__animated " key={4}>
+          <img src="vit4.jpg" className="w-[600px] object-cover h-[350px] " alt="Slide 4" />
+          
         </div>
 
-        <button
-          className="prev absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold py-2 px-4 rounded-l focus:outline-none"
-          onClick={() => plusSlides(-1)}
-        >
-          &#10094;
-        </button>
-        <button
-          className="next absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white font-bold py-2 px-4 rounded-r focus:outline-none"
-          onClick={() => plusSlides(1)}
-        >
-          &#10095;
-        </button>
+        </div>
+        
+
+       
       </div>
       <br />
 
       <div className="text-center">
+        <span
+          className="dot bg-gray-500 h-3 w-3 rounded-full inline-block mx-1"
+          onClick={() => currentSlide(0)}
+        ></span>
         <span
           className="dot bg-gray-500 h-3 w-3 rounded-full inline-block mx-1"
           onClick={() => currentSlide(1)}
