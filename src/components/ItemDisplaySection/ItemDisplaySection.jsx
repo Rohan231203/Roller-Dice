@@ -1,4 +1,4 @@
-// import Notes from "../../assets/notes.jpg";
+// //import Notes from "../../assets/notes.webp";
 // import Dumbbell from "../../assets/dumbbell.webp";
 // import SolderingIron from "../../assets/soldering-iron.webp";
 
