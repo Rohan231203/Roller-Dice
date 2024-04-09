@@ -14,7 +14,7 @@ const Sidebar = () => {
   const { handleLogout } = useLogout();
   return (
     <aside
-      className="w-1/6 bg-[#FF735C]  flex flex-col justify-between items-center px-[1rem] py-[2rem] "
+      className="w-1/6 bg-gradient-to-b from-[#080D15] to-gray-900 flex flex-col justify-between items-center px-[1rem] py-[2rem] border-r-[1px] border-slate-500 "
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
       <ul className="w-full flex flex-col gap-3 ">
