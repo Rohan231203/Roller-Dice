@@ -18,10 +18,10 @@ const SignupSection = () => {
   const { loading, error, signup } = useSignUpWithEmailAndPassword();
   return (
     <>
-      <main className="w-full px-[6rem] pt-[3rem] pb-[5rem] bg-white flex relative">
-        <div className="hero-img w-3/6">
+      <main className="w-full px-[6rem] pt-[3rem] pb-[5rem] bg-white flex relative ">
+        <div className="hero-img w-3/6 flex items-center">
           <img
-            src="college.svg"
+            src="sign-up.gif"
             alt="College.svg"
             width="550px"
             height="550px"
