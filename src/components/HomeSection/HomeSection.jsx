@@ -84,7 +84,7 @@ const HomeSection = () => {
           />
         </div>
       </div>
-
+{/* categories */}
       <div className="categories w-full bg-white px-10 pt-10 m-0">
         <h2 className="text-2xl font-bold text-black mb-10">
           Browse by categories
