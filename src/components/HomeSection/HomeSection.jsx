@@ -75,17 +75,24 @@ const HomeSection = () => {
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
           <div className="item-container h-96 flex">
-            {!selectedCategoryIndex && <FeedPosts />}
-            {selectedCategoryIndex === 0 && <FilteredElectricalAndMechanics />}
-            {selectedCategoryIndex === 1 && <FilteredSportsAndGym />}
-            {selectedCategoryIndex === 2 && <FilteredAcademics />}
-            {selectedCategoryIndex === 3 && <FilteredAmeneties />}
-            {/* {selectedCategoryIndex === 4 && <Filtered />} */}
-            {/* Add similar conditions for other categories */}
-            {selectedCategoryIndex !== null && (
-              <button className="back-button" onClick={handleBackButtonClick}>
-                Back
-              </button>
+            {selectedCategoryIndex === null ? (
+              <FeedPosts />
+            ) : (
+              <>
+                {selectedCategoryIndex === 0 && (
+                  <FilteredElectricalAndMechanics />
+                )}
+                {selectedCategoryIndex === 1 && <FilteredSportsAndGym />}
+                {selectedCategoryIndex === 2 && <FilteredAcademics />}
+                {selectedCategoryIndex === 3 && <FilteredAmeneties />}
+                {/* {selectedCategoryIndex === 4 && <Filtered />} */}
+                <button
+                  className="back-button"
+                  onClick={handleBackButtonClick}
+                >
+                  Back
+                </button>
+              </>
             )}
           </div>
         </div>
