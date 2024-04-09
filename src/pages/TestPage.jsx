@@ -1,9 +1,8 @@
-import FAQ from "../components/FAQ/FAQ";
-
+import App1 from "../components/App1";
 const TestPage = () => {
   return (
     <div>
-      <FAQ />
+      <App1 />
     </div>
   );
 };
