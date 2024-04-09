@@ -1,4 +1,4 @@
-import Notes from "../../assets/notes.jpg";
+// import Notes from "../../assets/notes.jpg";
 // import Dumbbell from "../../assets/dumbbell.webp";
 // import SolderingIron from "../../assets/soldering-iron.webp";
 
@@ -48,7 +48,7 @@ const ItemDisplaySection = () => {
             >
               <div className="w-full mb-4 rounded-xl">
                 <img
-                  src={Notes}
+                  src='/notes.jpg'
                   alt={card.title}
                   className="rounded-md w-full"
                 />
