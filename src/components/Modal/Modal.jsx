@@ -9,14 +9,15 @@ const Modal = () => {
     title: "",
     description: "",
     category: "",
+    phone: "",
+    address: "",
   });
   const { isLoading, handleSellItem } = useSellitems();
   const imageRef = useRef(null);
   const { handleImageChange, selectedFile, setSelectedFile } = usePreviewImg();
-  const modalRef = useRef(null); // Ref to the dialog element
+  const modalRef = useRef(null);
 
   const handleSellingItem = async () => {
-    // Validate if any field is empty
     if (
       !inputs.title ||
       !inputs.description ||
@@ -75,16 +76,16 @@ const Modal = () => {
           />
           <textarea
             placeholder="Describe Your Product"
-            className="textarea textarea-bordered textarea-lg w-full max-w-xs mt-5 p-4 text-white"
+            className="textarea textarea-bordered text-[16px] w-full max-w-xs mt-5 p-4 text-white"
             value={inputs.description}
             onChange={(e) =>
               setInputs({ ...inputs, description: e.target.value })
             }
           ></textarea>
-          <label className="form-control w-full max-w-xs">
+          <label className="form-control max-w-xs">
             <div className="label">
               <span className="label-text ">Pick Your Category</span>
-              <span className="label-text-alt">Alt label</span>
+              {/* <span className="label-text-alt">Alt label</span> */}
             </div>
             <select
               className="select select-bordered text-white"
@@ -104,11 +105,38 @@ const Modal = () => {
               <option>Others</option>
             </select>
             <div className="label">
-              <span className="label-text-alt">Alt label</span>
+              {/* <span className="label-text-alt">Alt label</span> */}
             </div>
           </label>
 
-          <div className="input-submit-container flex flex-col justify-between text-white placeholder-text-white focus:placeholder-text-white">
+          <div className="contact-container flex flex-col gap-2">
+            <label htmlFor="contact-num" className="label-text">
+              Contact number
+            </label>
+            <input
+              type="tel"
+              name="contact-num"
+              id="contact-num"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              className="input input-bordered text-white w-1/2"
+              value={inputs.phone}
+              onChange={(e) => setInputs({ ...inputs, phone: e.target.value })}
+            />
+          </div>
+          <div className="address-container flex flex-col gap-2 my-2">
+            <label htmlFor="address" className="label-text">
+              Room-no and block name
+            </label>
+            <input
+              type="text"
+              name="address"
+              id="address"
+              className="input input-bordered text-white w-1/2"
+              value={inputs.phone}
+              onChange={(e) => setInputs({ ...inputs, phone: e.target.value })}
+            />
+          </div>
+          <div className="input-submit-container flex flex-col justify-between text-[16px] text-white placeholder-text-white focus:placeholder-text-white">
             <input
               type="file"
               className="py-4"
