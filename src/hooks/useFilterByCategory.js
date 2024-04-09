@@ -1,40 +1,36 @@
-// import React from 'react'
-
 import { useState } from "react";
 import toast from 'react-hot-toast';
 import { firestore } from "../firebase/firebase";
-import { collection,  getDocs, where } from "firebase/firestore";
-import { query } from "firebase/database";
-
+import { collection,  getDocs, query, where } from "firebase/firestore";
 
 export default function useFilterByCategory() {
     const [isLoading, setIsLoading] = useState(false);
-	const [category, setCategory] = useState(null);
+    const [categoryItems, setCategoryItems] = useState([]);
 
-    const sortByCategory =async(category)=>{
+    const sortByCategory = async (category) => {
         setIsLoading(true);
-        setCategory(null);
+        setCategoryItems([]); // Clear previous data
 
+        try {
+            const q = query(collection(firestore, 'items'), where("category", '==', category));
 
-    try{
-        const q=query(collection(firestore,'items'),where("category",'==',category));
+            const snapshot = await getDocs(q);
+            if (snapshot.empty) {
+                toast.error("No Items Found");
+                return;
+            }
 
-        const snapshot=await getDocs(q);
-        if (snapshot.empty) return 
-        toast.error("No Items Found");
-
-        snapshot.forEach((doc)=>{
-            setCategory(doc.data());
-        })
-    }
-    
-    catch(error){
-        toast.error(error.message)
-    }
-    finally{
-        setIsLoading(false);
-    }
+            const items = [];
+            snapshot.forEach((doc) => {
+                items.push(doc.data());
+            });
+            setCategoryItems(items);
+        } catch (error) {
+            toast.error(error.message);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
-  return {isLoading,sortByCategory,category,setCategory}
+    return { isLoading, sortByCategory, categoryItems };
 }

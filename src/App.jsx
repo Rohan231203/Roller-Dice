@@ -14,6 +14,7 @@ import HomePageSkeleton from "./pages/HomePage/HomePageSkeleton";
 import HomePage from "./pages/HomePage/HomePage";
 import ProfilePageSkeleton from "./pages/ProfilePage/ProfilePageSkeleton";
 import PageLayout from "./Page Layout/PageLayout";
+import Test1 from "./pages/TestPage/Test1";
 
 function App() {
   const [authUser] = useAuthState(auth);
@@ -35,7 +36,9 @@ function App() {
         />
         <Route path="/profile" element={<Profilepage />} />
         <Route path="/about" element={<AboutPage />} />
+      <Route path="/test" element={<Test1/>} />
       </Routes>
+      
       <Toaster />
     </>
   );
