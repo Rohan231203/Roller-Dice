@@ -9,7 +9,7 @@ import useUserProfileStore from '../store/userProfileStore';
 
 export default function useGetRents() {
 const[isLoading,setIsLoading]=useState(true);
-  const{items,setItems}=useitemStore();
+  const{items,setRents}=useitemStore();
   const { setUserProfile } = useUserProfileStore();
   const authUser=useAuthStore((state)=>state.user);
 
@@ -26,7 +26,7 @@ const[isLoading,setIsLoading]=useState(true);
                 const item={id:doc.id,...data}
                 itemsRent.push(item);
             }
-            setItems(itemsRent);
+            setRents(itemsRent);
         }
         catch(error){
             toast.error(error.message)
@@ -37,7 +37,7 @@ const[isLoading,setIsLoading]=useState(true);
     }
     if(authUser) fetchRents();
 
-  },[authUser,setItems,setUserProfile])
+  },[authUser,setRents,setUserProfile])
   
   return {isLoading,items}
 }
