@@ -10,6 +10,7 @@ import FilteredElectricalAndMechanics from "../../pages/FilteredPage/FilteredEle
 import FilteredAcademics from "../../pages/FilteredPage/FilteredAcademics";
 import FilteredAmeneties from "../../pages/FilteredPage/FilteredAmeneties";
 import FeedPosts from "../FeedPosts/FeedPosts";
+import FeedRents from "../FeedRents/FeedRents";
 
 const HomeSection = () => {
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
@@ -74,9 +75,9 @@ const HomeSection = () => {
 
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
-          <div className="item-container h-96 flex">
+          {/* <div className="item-container h-96 flex">
             {selectedCategoryIndex === null ? (
-              <FeedPosts />
+              <FeedPosts/>
             ) : (
               <>
                 {selectedCategoryIndex === 0 && (
@@ -85,17 +86,18 @@ const HomeSection = () => {
                 {selectedCategoryIndex === 1 && <FilteredSportsAndGym />}
                 {selectedCategoryIndex === 2 && <FilteredAcademics />}
                 {selectedCategoryIndex === 3 && <FilteredAmeneties />}
-                {/* {selectedCategoryIndex === 4 && <Filtered />} */}
                 <button
                   className="back-button"
                   onClick={handleBackButtonClick}
                 >
                   Back
                 </button>
+
               </>
             )}
-          </div>
+          </div> */}
         </div>
+          <FeedRents />
       </div>
     </main>
   );

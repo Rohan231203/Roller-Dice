@@ -14,6 +14,8 @@ export default function useGetItems() {
   const authUser = useAuthStore((state) => state.user);
 
   useEffect(() => {
+    // console.log(setUserProfile)
+
     const fetchItems = async () => {
       setIsLoading(true);
     
