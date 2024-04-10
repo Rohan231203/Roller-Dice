@@ -74,7 +74,7 @@ function Slideshow() {
           <div className="mySlides fade mx-auto animate__animated " key={4}>
             <img
               src="college-4.svg"
-              className="object-cover h-[400px] brightness-125 shadow-md"
+              className="object-cover h-[400px]   brightness-125 shadow-md"
               alt="Slide 4"
             />
           </div>
