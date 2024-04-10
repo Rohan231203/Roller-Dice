@@ -1,12 +1,12 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
 import Modal4 from "./Modal4";
-import ChatModal from "../../chatuser/ChatModal";
 
 function Modal2() {
   const closeModal = () => {
     const modal = document.getElementById("my_modal_1");
     modal.close();
   };
-
   return (
     <div>
       <button
@@ -32,7 +32,11 @@ function Modal2() {
           <p className="address py-2">Room-no 242 A-block</p>
           <div className="modal-action mt-3  w-full flex justify-between">
             <Modal4 />
-            <button className="btn" onClick={closeModal}>Close</button>
+            <form method="dialog w-full flex justify-between">
+              <button className="btn" onClick={closeModal}>
+                Close
+              </button>
+            </form>
           </div>
         </div>
       </dialog>
