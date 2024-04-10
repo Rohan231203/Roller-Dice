@@ -1,17 +1,16 @@
 /* eslint-disable no-unused-vars */
 
+import React from 'react';
 import useAuthStore from "../../store/authStore";
 import useUserProfileStore from "../../store/userProfileStore";
 import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 
-
-
 const ProfileSection = () => {
-  const{userProfile}=useUserProfileStore();
-  const authUser=useAuthStore((state)=>state.user)
-  // const visitingOwnProfileAndAuth = authUser && authUser.username === userProfile.username;
-	// const visitingAnotherProfileAndAuth = authUser && authUser.username !== userProfile.username;
+  const { userProfile } = useUserProfileStore();
+  const authUser = useAuthStore((state) => state.user);
+  let fullName = localStorage.getItem('user-info') ? JSON.parse(localStorage.getItem('user-info')).fullName : "";
+
   return (
     <div className="flex flex-col bg-gradient-to-b from-[#080D15] to-gray-900 w-5/6 overflow-y-scroll" style={{height: "calc(100vh - var(--navbar-height))"}}>
       <div className="flex flex-row m-0 p-10 justify-start gap-14 items-center">
@@ -23,7 +22,7 @@ const ProfileSection = () => {
 
         <div className="flex flex-col">
           <h1 className="text-3xl text-red-600 font-mono font-bold animate__animated ">Aytaditya</h1>
-          <h2 className="text-[#b6b5b5] pt-2 pb-1">ADITYA ARYAN</h2>
+          <h2 className="text-[#b6b5b5] pt-2 pb-1">{fullName}</h2>
           <p className="text-[#b6b5b5] pt-2 pb-1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem architecto neque beatae iure quo officia repudiandae similique labore magni accusamus. Non inventore velit cumque molestias et adipisci porro obcaecati asperiores?</p>
         </div>
       </div>
@@ -37,8 +36,6 @@ const ProfileSection = () => {
       
       <div>
         <Card />
-        
-      
       </div>
     </div>
   );

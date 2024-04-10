@@ -3,6 +3,7 @@ import LogInNav from "../../components/LogInNav/LogInNav";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Footer from "../../components/Footer/Footer";
 import HomeSection from "../../components/HomeSection/HomeSection";
+import UserPosts from "../../components/UserPosts/UserPosts";
 
 export default function HomePage() {
   return (
@@ -11,6 +12,7 @@ export default function HomePage() {
       <div className="main-section-home flex w-full mt-[var(--navbar-height)] ">
         <Sidebar />
         <HomeSection />
+        {/* <UserPosts/> */}
       </div>
       <Footer />
     </div>
