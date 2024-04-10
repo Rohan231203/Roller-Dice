@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import PropTypes from "prop-types";
-import Modal2 from "../Modal/Modal2";
+import Modal2 from "../Modal/Modal2"; // Ensure the correct path to Modal2 component
 
 const FeedPost = ({ item }) => {
   return (

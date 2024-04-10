@@ -45,7 +45,7 @@ function Slideshow() {
 
   return (
     <div>
-      <div className="slideshow-container max-w-full h-screen  mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center rounded-lg">
+      <div className="slideshow-container max-w-full h-[70%] mb-28  mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center rounded-lg">
         <div className="sub-container border-white  ">
           <div
             className="mySlides fade mx-auto animate__animated animate__fadeIn"
@@ -86,7 +86,7 @@ function Slideshow() {
           >
             <img
               src="college-4.svg"
-              className="object-cover h-[400px] brightness-125 shadow-md"
+              className="object-cover h-[400px]   brightness-125 shadow-md"
               alt="Slide 4"
             />
           </div>

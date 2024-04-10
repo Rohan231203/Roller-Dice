@@ -7,11 +7,13 @@ import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import "animate.css";
 
+
 import useLogout from "../../hooks/useLogout";
 import Modal from "../Modal/Modal";
 import Modal3 from "../Modal/Modal3";
 
 const Sidebar = () => {
+
   const { handleLogout } = useLogout();
   return (
     <aside
@@ -26,7 +28,7 @@ const Sidebar = () => {
           </div>
         </Link>
         <Link to="/">
-          <div className="home-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft ">
+          <div className="home-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft " id="some-element">
             <IoHomeOutline size={24} />
             <li>Home</li>
           </div>

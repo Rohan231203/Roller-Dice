@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import { GiElectricalResistance } from "react-icons/gi";
 import { CgGym } from "react-icons/cg";
@@ -11,7 +12,11 @@ import FilteredAcademics from "../../pages/FilteredPage/FilteredAcademics";
 import FilteredAmeneties from "../../pages/FilteredPage/FilteredAmeneties";
 import FeedPosts from "../FeedPosts/FeedPosts";
 
+
 const HomeSection = () => {
+
+ 
+ 
   const [selectedCategoryIndex, setSelectedCategoryIndex] = useState(null);
 
   const handleCategoryClick = (index) => {
@@ -54,7 +59,7 @@ const HomeSection = () => {
       <div className="divider"></div>
       {/* categories */}
       <div className="categories w-full bg-transparent px-10 pt-10 m-0 bg-gradient-to-b from-[#06090E] to-gray-900">
-        <h2 className="text-2xl font-bold text-gray-200 mb-10">
+        <h2 className="text-2xl font-bold text-gray-200 mb-10" >
           Browse by categories
         </h2>
         <div className="categories-container flex justify-between animation-element">

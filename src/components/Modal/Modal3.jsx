@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Modal3.js
 import { useRef, useState } from "react";
 import usePreviewImg from "../../hooks/usePreviewImg";
