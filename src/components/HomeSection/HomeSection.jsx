@@ -60,13 +60,13 @@ const HomeSection = () => {
         <div className="categories-container flex justify-between animation-element">
           {categoryList.map((catItem, index) => (
             <div
-              className={`catItem border-[3px] rounded-xl bg-transparent border-neutral-200 h-[10rem] w-[10rem] text-neutral-300 font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:tezt-black cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent animate_animated hover:animate__pulse ${
+              className={`catItem border-[3px] rounded-xl bg-transparent border-neutral-200 h-[10rem] w-[10rem] text-white font-mono text-lg font-bold flex flex-col gap-3 justify-center items-center text-center hover:bg-red-500 hover:border-red-500 hover:text-black cursor-pointer active:border-[2.5px] active:border-red-500 active:text-red-500 active:bg-transparent animate_animated hover:animate__pulse ${
                 selectedCategoryIndex === index ? "selected" : ""
               }`}
               key={index}
               onClick={() => handleCategoryClick(index)}
             >
-              <h2>{catItem.title}</h2>
+              <h2 className="">{catItem.title}</h2>
               {catItem.img}
             </div>
           ))}
@@ -74,26 +74,30 @@ const HomeSection = () => {
 
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
-          <div className="item-container h-96 flex">
-            {selectedCategoryIndex === null ? (
-              <FeedPosts />
-            ) : (
-              <>
-                {selectedCategoryIndex === 0 && (
-                  <FilteredElectricalAndMechanics />
-                )}
-                {selectedCategoryIndex === 1 && <FilteredSportsAndGym />}
-                {selectedCategoryIndex === 2 && <FilteredAcademics />}
-                {selectedCategoryIndex === 3 && <FilteredAmeneties />}
-                {/* {selectedCategoryIndex === 4 && <Filtered />} */}
-                <button
-                  className="back-button"
-                  onClick={handleBackButtonClick}
-                >
-                  Back
-                </button>
-              </>
-            )}
+          <div className="item-container h-96 flex flex-col">
+            <div className="item-container h-96 flex flex-col items-start flex-wrap">
+              {selectedCategoryIndex === null ? (
+                <FeedPosts />
+              ) : (
+                <>
+                  {selectedCategoryIndex === 0 && (
+                    <FilteredElectricalAndMechanics />
+                  )}
+                  {selectedCategoryIndex === 1 && <FilteredSportsAndGym />}
+                  {selectedCategoryIndex === 2 && <FilteredAcademics />}
+                  {selectedCategoryIndex === 3 && <FilteredAmeneties />}
+                  {/* {selectedCategoryIndex === 4 && <Filtered />} */}
+                  <div className="">
+                    <button
+                      className="back-button rounded-xl w-[11rem] h-[35px] mt-6 bg-red-500 text-white"
+                      onClick={handleBackButtonClick}
+                    >
+                      Back to All Products
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </div>
