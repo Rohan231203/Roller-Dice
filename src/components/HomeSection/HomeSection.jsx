@@ -79,7 +79,7 @@ const HomeSection = () => {
 
         <div className="item-section py-10 bg-transparent w-auto overflow-x-scroll">
           <h1 className="text-2xl text-gray-200 font-bold mb-8">Products</h1>
-          {/* <div className="item-container h-96 flex flex-col">
+          <div className="item-container h-96 flex flex-col">
             <div className="item-container h-96 flex flex-col items-start flex-wrap">
               {selectedCategoryIndex === null ? (
                 <FeedPosts/>
@@ -103,9 +103,9 @@ const HomeSection = () => {
               </>
               )}
             </div>
-          </div> */}
+          </div>
         </div>
-          <FeedRents />
+          {/* <FeedRents /> */}
       </div>
     </main>
   );
