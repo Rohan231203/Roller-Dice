@@ -15,10 +15,10 @@ const Sidebar = () => {
   const { handleLogout } = useLogout();
   return (
     <aside
-      className="w-1/6 bg-gradient-to-b from-[#080D15] to-gray-900 flex flex-col justify-between items-center px-[1rem] py-[2rem] border-r-[1px] border-slate-500 "
+      className="w-1/6 bg-gradient-to-b from-[#080D15] to-gray-900 flex flex-col justify-between items-center px-[1rem] py-[2rem] border-r-[1px] border-slate-500"
       style={{ height: "calc(100vh - var(--navbar-height))" }}
     >
-      <ul className="w-full flex flex-col gap-3 ">
+      <ul className="w-full flex flex-col gap-5 ">
         <Link to="/profile">
           <div className="profile-item w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 hover:text-black active:bg-slate-400 px-[1.4rem] h-[2.5rem] animate__animated animate__backInLeft">
             <CgProfile size={24} />
@@ -47,12 +47,12 @@ const Sidebar = () => {
           <FaPlus />
           <Modal />
         </div>
-        <div className="faq-item w-full flex items-center text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500  hover:text-black active:bg-slate-400 px-[1.5rem] h-[2.5rem] animate__animated animate__backInLeft ">
+        <div className="faq-item w-full flex items-center text-lg font-semibold cursor-pointer rounded-xl hover:bg-red-500 text-white hover:text-black active:bg-slate-400 px-[1.5rem] h-auto animate__animated animate__backInLeft ">
           <FaPlus />
           <Modal3 />
         </div>
       </ul>
-      <div className="listings-item w-full flex items-center gap-6 text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-100 active:bg-slate-400 px-[1.4rem] h-[2.5rem] hover:text-black ">
+      <div className="listings-item w-full flex items-center gap-6 text-md font-semibold cursor-pointer rounded-xl hover:bg-slate-100 active:bg-slate-400 px-[1.4rem] h-auto py-[15px] hover:text-black ">
         <LuLogOut size={24} color="red" className="rotate-180" />
         <h2 className="text-red-500 font-Poppins " onClick={handleLogout}>
           Logout

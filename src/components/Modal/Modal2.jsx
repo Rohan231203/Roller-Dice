@@ -6,7 +6,7 @@ function Modal2() {
   return (
     <div>
       <button
-        className="btn bg-red-500 text-black border-0 text-base w-full hover:text-white"
+        className="btn bg-red-500 text-black border-0 text-base w-full hover:text-white mt-4"
         onClick={() => document.getElementById("my_modal_1").showModal()}
       >
         Details
