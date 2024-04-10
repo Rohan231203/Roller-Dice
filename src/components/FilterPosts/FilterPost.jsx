@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import Modal2 from "../Modal/Modal2";
 
 const FilterPost = ({ item }) => {
   return (
