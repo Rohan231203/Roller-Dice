@@ -47,7 +47,10 @@ function Slideshow() {
     <div>
       <div className="slideshow-container max-w-full h-screen  mx-auto relative max-h-[500px] overflow-hidden flex justify-center items-center rounded-lg">
         <div className="sub-container border-white  ">
-          <div className="mySlides fade mx-auto animate__animated " key={1}>
+          <div
+            className="mySlides fade mx-auto animate__animated animate__fadeIn"
+            key={1}
+          >
             <img
               src="college-1.svg"
               className=" object-cover h-[400px] shadow-md"
@@ -55,7 +58,10 @@ function Slideshow() {
             />
           </div>
 
-          <div className="mySlides fade mx-auto animate__animated " key={2}>
+          <div
+            className="mySlides fade mx-auto animate__animated animate__fadeIn"
+            key={2}
+          >
             <img
               src="college-2.svg"
               className="object-cover h-[400px] brightness-125 shadow-md"
@@ -63,7 +69,10 @@ function Slideshow() {
             />
           </div>
 
-          <div className="mySlides fade mx-auto animate__animated " key={3}>
+          <div
+            className="mySlides fade mx-auto animate__animated animate__fadeIn"
+            key={3}
+          >
             <img
               src="college-3.svg"
               className="object-cover h-[400px] brightness-125 shadow-md"
@@ -71,7 +80,10 @@ function Slideshow() {
             />
           </div>
 
-          <div className="mySlides fade mx-auto animate__animated " key={4}>
+          <div
+            className="mySlides fade mx-auto animate__animated animate__fadeIn"
+            key={4}
+          >
             <img
               src="college-4.svg"
               className="object-cover h-[400px] brightness-125 shadow-md"
@@ -105,3 +117,5 @@ function Slideshow() {
 }
 
 export default Slideshow;
+
+// animate__fadeIn;
