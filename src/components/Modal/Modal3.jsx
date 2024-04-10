@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // Modal3.js
 import { useRef, useState } from "react";
 import usePreviewImg from "../../hooks/usePreviewImg";
@@ -54,7 +55,7 @@ const Modal3 = () => {
   return (
     <div className="w-full">
       <button
-        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black px-[1.4rem] h-[2.5rem] hover:bg-transparent"
+        className="btn btn-primary bg-transparent border-0 w-full flex items-center gap-6 text-white text-lg font-semibold cursor-pointer rounded-xl hover:bg-slate-200 hover:text-black h-auto hover:bg-transparent"
         onClick={() => modalRef.current.showModal()}
       >
         Request Item
@@ -104,9 +105,7 @@ const Modal3 = () => {
                 id="from-date"
                 className="input input-bordered text-white w-1/2"
                 value={inputs.from}
-                onChange={(e) =>
-                  setInputs({ ...inputs, from: e.target.value })
-                }
+                onChange={(e) => setInputs({ ...inputs, from: e.target.value })}
               />
             </div>
             <div className="address-container flex flex-col gap-2 my-2">

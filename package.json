@@ -12,8 +12,10 @@
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "animate.css": "^4.1.1",
+    "chat-engine": "^0.9.21",
     "firebase": "^10.10.0",
     "react": "^18.2.0",
+    "react-chat-engine": "^1.11.28",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-hot-toast": "^2.4.1",

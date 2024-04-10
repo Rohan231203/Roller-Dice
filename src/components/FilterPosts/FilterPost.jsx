@@ -1,4 +1,3 @@
-
 import PropTypes from "prop-types";
 
 const FilterPost = ({ item }) => {
@@ -14,10 +13,11 @@ const FilterPost = ({ item }) => {
         )}
       </div>
       <h2 className="text-xl font-bold text-gray-100">{item.title}</h2>
-      <p className="text-black text-sm font-medium overflow-hidden line-clamp-3">
+      <p className="text-black text-sm font-medium overflow-hidden line-clamp-3 mt-2">
         {item.description}
       </p>
-      <div className=" mt-auto">
+      <div className=" mt-5">
+        {/* <Modal2 /> */}
         {/* <Modal2 /> */}
       </div>
     </article>
@@ -29,7 +29,7 @@ FilterPost.propTypes = {
     imageURL: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
-    id: PropTypes.string // Ensure `id` is included in the PropTypes validation
+    id: PropTypes.string, // Ensure `id` is included in the PropTypes validation
   }),
 };
 

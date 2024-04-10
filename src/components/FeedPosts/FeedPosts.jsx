@@ -14,9 +14,7 @@ const FeedPosts = () => {
           <FeedPost key={item.id} item={item} /> // Pass each item as `item` prop
         ))}
 
-      {!isLoading && items.length === 0 && (
-        <>Dayuum. Looks like you don&apos;t have any adds now.</>
-      )}
+      {!isLoading && items.length === 0 && <>No item listed</>}
     </div>
   );
 };
